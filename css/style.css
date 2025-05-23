@@ -1,17 +1,4 @@
 /* RESET */
-/*
-@font-face {
-    font-family: 'Aerotis';
-    src: url('fonts/aerotis/Aerotis.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-body {
-    font-family: 'Aerotis', cursive;
-}
-*/
-
 @font-face {
     font-family: 'Aerotis';
     src: url('fonts/Aerotis.woff2') format('woff2');
