@@ -76,3 +76,10 @@ body{
     transition: opacity 2s ease;
     background: white;
 }
+
+.img-flower{
+    position: fixed;
+    width: 200px;
+    right: -40px;
+    top: -30px;
+}
