@@ -51,6 +51,14 @@ a{
 text-decoration: none;
 color: currentColor;
 }
+/*
+body{
+    background-image: url('../img/FIORI.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+*/
 
 /* LAYOVER */
 .layover-container{
