@@ -82,6 +82,7 @@ body{
     width: 200px;
     right: -40px;
     top: -30px;
+    z-index: -1;
 }
 
 
@@ -91,5 +92,6 @@ body{
     left: -40px;
     bottom: -30px;
     transform: rotate(180deg);
+    z-index: -1;
 }
 
