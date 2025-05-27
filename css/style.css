@@ -79,9 +79,9 @@ body{
 
 .img-flower{
     position: fixed;
-    width: 200px;
-    right: -40px;
-    top: -30px;
+    width: 150px;
+    right: -30px;
+    top: -20px;
     z-index: -1;
 }
 
