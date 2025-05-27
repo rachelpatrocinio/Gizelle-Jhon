@@ -173,6 +173,6 @@ body{
 
   @media screen and (min-width: 350px) {
     #backlink{
-        display: none!important;
+        display: none !important;
     }
   }

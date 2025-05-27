@@ -60,3 +60,11 @@ audio.play().catch(() => {
 // Se bloccata, attendo click o scroll per far partire la musica
 window.addEventListener('click', playAudio);
 window.addEventListener('scroll', playAudio);
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    var element = document.getElementById("backlink");
+    if (element) {
+      element.remove();
+    }
+  });
