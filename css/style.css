@@ -161,4 +161,8 @@ body{
     100% { transform: translateX(-100vw); }
   }
   
-  
+  .nav .col-2{
+    padding: 10px !important;
+    font-size: 10px;
+    text-align: center;
+  }
