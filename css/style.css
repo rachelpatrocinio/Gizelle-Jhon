@@ -115,35 +115,45 @@ body{
 }
 
 /* HERO BANNER */
-.carousel-title {
-    position: absolute;
-    width: 100%;
-    top: 10px;
-    z-index: 10;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    pointer-events: none; /* Non blocca i click sotto */
-  }
-  
-  .hero-banner {
-    position: relative; /* Necessario per posizionare la scritta */
+.hero-banner {
+    position: relative;
     overflow: hidden;
     width: 100%;
-    padding-top: 60px; /* Spazio per la scritta */
+    height: 300px; /* Imposta un’altezza per poter centrare verticalmente */
   }
   
+  /* Scritta centrata */
+  .carousel-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;     /* Centra verticalmente */
+    justify-content: center; /* Centra orizzontalmente */
+    z-index: 10;
+    pointer-events: none;
+  }
+  
+  .carousel-title h2 {
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    margin: 0;
+  }
+  
+  /* Immagini e animazione */
   .carousel-track {
     display: flex;
-    width: calc(33.33% * 6); /* 6 immagini */
+    width: calc(33.33% * 6);
     animation: scrollThreeImages 18s linear infinite;
+    height: 100%;
   }
   
   .carousel-track img {
     width: 33.33vw;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     flex-shrink: 0;
   }
@@ -152,4 +162,5 @@ body{
     0%   { transform: translateX(0); }
     100% { transform: translateX(-100vw); }
   }
+  
   
