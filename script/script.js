@@ -37,3 +37,26 @@ document.addEventListener('click', e => {
     hideOverlay();
   }
 });
+
+
+
+// MUSIC
+const audio = document.getElementById('bg-music');
+
+function playAudio() {
+  audio.play().catch(() => {
+    console.log("Autoplay bloccato, attendi interazione");
+  });
+  // Rimuovo i listener dopo il primo play
+  window.removeEventListener('click', playAudio);
+  window.removeEventListener('scroll', playAudio);
+}
+
+// Provo a far partire subito la musica (molto probabilmente bloccata)
+audio.play().catch(() => {
+  console.log("Autoplay bloccato, attendi interazione");
+});
+
+// Se bloccata, attendo click o scroll per far partire la musica
+window.addEventListener('click', playAudio);
+window.addEventListener('scroll', playAudio);
