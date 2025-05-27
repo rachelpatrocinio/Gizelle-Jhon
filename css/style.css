@@ -170,3 +170,7 @@ body{
     text-align: center;
     color: #465438;
   }
+
+  #backlink{
+    display: none!important;
+  }
