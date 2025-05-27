@@ -87,9 +87,9 @@ body{
 
 .img-flower1{
     position: fixed;
-    width: 200px;
-    left: -40px;
-    top: -30px;
+    width: 150px;
+    left: -30px;
+    top: -20px;
     transform: scaleX(-1);
     z-index: -1;
 }
@@ -97,9 +97,9 @@ body{
 
 .img-flower2{
     position: fixed;
-    width: 200px;
-    left: -40px;
-    bottom: -30px;
+    width: 150px;
+    left: -30px;
+    bottom: -20px;
     transform: rotate(180deg);
     z-index: -1;
 }
