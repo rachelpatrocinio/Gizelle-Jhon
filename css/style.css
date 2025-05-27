@@ -171,6 +171,8 @@ body{
     color: #465438;
   }
 
-  #backlink{
-    display: none!important;
+  @media screen and (min-width: 350px) {
+    #backlink{
+        display: none!important;
+    }
   }
