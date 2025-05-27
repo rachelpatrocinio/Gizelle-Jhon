@@ -104,6 +104,11 @@ body{
     z-index: -1;
 }
 
+.logo-header{
+    width: 100px;
+    height: 100px;
+}
+
 
 .main-title{
     color: #50593C;

@@ -2,23 +2,20 @@ let touchStartY = 0;
 let touchEndY = 0;
 const threshold = 50; // distanza minima per considerare swipe
 
-function handleGesture() {
+function hideOverlay() {
   const overlay = document.querySelector('.layover-container');
   if (!overlay) return;
 
-  if (touchEndY < touchStartY - threshold) {
-    console.log('Swipe verso l\'alto');
-    overlay.style.opacity = '0';
-    setTimeout(() => {
-      overlay.style.display = 'none';
-    }, 500);
-  }
-  if (touchEndY > touchStartY + threshold) {
-    console.log('Swipe verso il basso');
-    overlay.style.opacity = '0';
-    setTimeout(() => {
-      overlay.style.display = 'none';
-    }, 500);
+  overlay.style.opacity = '0';
+  setTimeout(() => {
+    overlay.style.display = 'none';
+  }, 500);
+}
+
+function handleGesture() {
+  if (touchEndY < touchStartY - threshold || touchEndY > touchStartY + threshold) {
+    console.log('Swipe rilevato');
+    hideOverlay();
   }
 }
 
@@ -29,4 +26,14 @@ document.addEventListener('touchstart', e => {
 document.addEventListener('touchend', e => {
   touchEndY = e.changedTouches[0].screenY;
   handleGesture();
+});
+
+document.addEventListener('click', e => {
+  const overlay = document.querySelector('.layover-container');
+  if (!overlay) return;
+
+  if (overlay.contains(e.target)) {
+    console.log('Click sull\'overlay');
+    hideOverlay();
+  }
 });
