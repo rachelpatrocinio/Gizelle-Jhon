@@ -85,6 +85,15 @@ body{
     z-index: -1;
 }
 
+.img-flower1{
+    position: fixed;
+    width: 200px;
+    left: -40px;
+    top: -30px;
+    transform: rotate(180deg);
+    z-index: -1;
+}
+
 
 .img-flower2{
     position: fixed;
