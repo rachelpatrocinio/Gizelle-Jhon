@@ -119,7 +119,6 @@ body{
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 300px; /* Imposta un’altezza per poter centrare verticalmente */
   }
   
   /* Scritta centrata */
