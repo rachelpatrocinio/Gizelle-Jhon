@@ -114,10 +114,25 @@ body{
     color: #50593C;
 }
 
-
-.hero-banner {
+/* HERO BANNER */
+.carousel-title {
+    position: absolute;
     width: 100%;
+    top: 10px;
+    z-index: 10;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    pointer-events: none; /* Non blocca i click sotto */
+  }
+  
+  .hero-banner {
+    position: relative; /* Necessario per posizionare la scritta */
     overflow: hidden;
+    width: 100%;
+    padding-top: 60px; /* Spazio per la scritta */
   }
   
   .carousel-track {
@@ -127,7 +142,7 @@ body{
   }
   
   .carousel-track img {
-    width: 33.33vw; /* 3 immagini visibili alla volta */
+    width: 33.33vw;
     height: auto;
     object-fit: cover;
     flex-shrink: 0;
@@ -135,6 +150,6 @@ body{
   
   @keyframes scrollThreeImages {
     0%   { transform: translateX(0); }
-    100% { transform: translateX(-100vw); } /* scorre via 3 immagini */
+    100% { transform: translateX(-100vw); }
   }
   
