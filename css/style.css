@@ -83,3 +83,13 @@ body{
     right: -40px;
     top: -30px;
 }
+
+
+.img-flower2{
+    position: fixed;
+    width: 200px;
+    left: -40px;
+    bottom: -30px;
+    transform: rotate(180deg);
+}
+
