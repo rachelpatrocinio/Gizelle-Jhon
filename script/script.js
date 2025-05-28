@@ -47,9 +47,11 @@ function playAudio() {
   audio.play().catch(() => {
     console.log("Autoplay bloccato, attendi interazione");
   });
+
   // Rimuovo i listener dopo il primo play
   window.removeEventListener('click', playAudio);
   window.removeEventListener('scroll', playAudio);
+  window.removeEventListener('touchstart', playAudio);
 }
 
 // Provo a far partire subito la musica (molto probabilmente bloccata)
@@ -57,9 +59,11 @@ audio.play().catch(() => {
   console.log("Autoplay bloccato, attendi interazione");
 });
 
-// Se bloccata, attendo click o scroll per far partire la musica
+// Se bloccata, attendo click, scroll o swipe
 window.addEventListener('click', playAudio);
 window.addEventListener('scroll', playAudio);
+window.addEventListener('touchstart', playAudio);
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
