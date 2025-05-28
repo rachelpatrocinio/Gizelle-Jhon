@@ -202,6 +202,14 @@ body{
   .time-box {
     display: inline-block;
     margin: 0 10px;
+    min-width: 60px;
+  }
+
+  @media screen and (min-width: 789px){
+    .time-box {
+        min-width: 60px;
+        font-size: 60px;
+    }
   }
   .label {
     font-size: 0.5em;
