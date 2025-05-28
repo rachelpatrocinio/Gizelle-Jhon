@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // COUNTDOWN
     // Imposta la data di destinazione: 11 Ottobre 2025, ore 16:30
-    const targetDate = new Date(2025, 9, 11, 16, 30, 0); // Ottobre = mese 9
+    const targetDate = new Date(2025, 9, 11, 15, 30, 0); // Ottobre = mese 9
 
     function updateCountdown() {
       const now = new Date();
