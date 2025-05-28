@@ -263,20 +263,16 @@ nav .col-2{
 
 
 #carouselExample {
-  height: 400px; /* Altezza fissa del carosello */
+  height: 400px; /* altezza fissa del carosello */
   overflow: hidden;
 }
 
 #carouselExample .carousel-item {
   height: 100%;
-  display: flex;
-  justify-content: center;  /* Centra orizzontalmente */
-  align-items: center;      /* Centra verticalmente */
 }
 
 #carouselExample .carousel-item img {
   height: 100%;
-  width: auto;             /* Mantieni proporzioni corrette */
-  object-fit: cover;       /* Ritaglia l'immagine per coprire l'area */
-  object-position: center; /* Centra l'immagine */
+  width: 100%;
+  object-fit: cover; /* fa il "crop" e riempie tutto */
 }
