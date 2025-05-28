@@ -180,10 +180,10 @@ body{
 
 /* COUNTDOWN */
   #countdown {
-    font-family: Arial, sans-serif;
     font-size: 2em;
     text-align: center;
     margin-top: 50px;
+    color: #A34B3E;
   }
   .time-box {
     display: inline-block;
