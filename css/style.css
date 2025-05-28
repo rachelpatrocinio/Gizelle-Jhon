@@ -163,7 +163,7 @@ body{
   .carousel-track {
     display: flex;
     width: calc(33.33% * 6);
-    animation: scrollThreeImages 18s linear infinite;
+    animation: scrollThreeImages 19s linear infinite;
   }
   
   .carousel-track img {
