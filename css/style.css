@@ -209,7 +209,7 @@ nav .col-2{
 }
 
 @media screen and (min-width: 789px){
-    nav .col-12{
+    nav .col-2{
         font-size: 20px;
     }
 }
