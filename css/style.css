@@ -247,3 +247,9 @@ nav .col-2{
     transform: translateY(-8px);
   }
 }
+
+
+.section-title{
+  font-size: 18px;
+  color: #50593C;
+}
