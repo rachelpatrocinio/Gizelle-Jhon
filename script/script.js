@@ -72,3 +72,31 @@ document.addEventListener("DOMContentLoaded", function () {
       element.remove();
     }
   });
+
+
+  // COUNTDOWN
+    // Imposta la data di destinazione: 11 Ottobre 2025, ore 16:30
+    const targetDate = new Date(2025, 9, 11, 16, 30, 0); // Ottobre = mese 9
+
+    function updateCountdown() {
+      const now = new Date();
+      const timeLeft = targetDate - now;
+  
+      if (timeLeft <= 0) {
+        document.getElementById("countdown").innerHTML = "È arrivato il momento!";
+        return;
+      }
+  
+      const seconds = Math.floor((timeLeft / 1000) % 60);
+      const minutes = Math.floor((timeLeft / 1000 / 60) % 60);
+      const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  
+      document.getElementById("days").textContent = String(days).padStart(2, "0");
+      document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+      document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+      document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+    }
+  
+    updateCountdown(); // Aggiorna subito
+    setInterval(updateCountdown, 1000); // Poi ogni secondo

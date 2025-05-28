@@ -176,3 +176,21 @@ body{
         display: none !important;
     }
   }
+
+
+/* COUNTDOWN */
+  #countdown {
+    font-family: Arial, sans-serif;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 50px;
+  }
+  .time-box {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  .label {
+    font-size: 0.5em;
+    display: block;
+    margin-top: 5px;
+  }
