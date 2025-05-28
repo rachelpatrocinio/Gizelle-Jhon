@@ -113,6 +113,13 @@ body{
     height: 140px;
 }
 
+@media screen and (min-width: 789px){
+    .logo-header{
+        width: 170px;
+        height: 190px;
+    }
+}
+
 
 .main-title{
     color: #50593C;
