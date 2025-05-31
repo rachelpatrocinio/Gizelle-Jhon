@@ -41,6 +41,10 @@ document.addEventListener('click', e => {
 */
 
 document.addEventListener("DOMContentLoaded", function () {
+
+  var activeMenu = document.querySelector('.home p');
+  activeMenu.style.borderBottom = "1px solid #50593C";
+
   // Rimuove backlink se esiste
   var element = document.getElementById("backlink");
   if (element) {
@@ -184,5 +188,4 @@ document.addEventListener("DOMContentLoaded", function () {
         var menuLinkP = menuLink.querySelector('p');
         menuLinkP.style.borderBottom = "1px solid #50593C";
       },50)
-
     }
