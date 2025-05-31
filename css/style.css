@@ -113,6 +113,8 @@ body{
     overflow: hidden;
     width: 100%;
   }
+
+ 
   
   /* Scritta centrata */
   .carousel-title {
@@ -129,9 +131,14 @@ body{
   }
 
   @media screen and (min-width: 789px){
-    .carousel-title h3{
-        font-size: 60px;
-      }
+    .carousel-title .title_hero_banner{
+        font-size: 80px;
+    }
+
+    .carousel-title .date_hero_banner{
+      color: white;
+      font-size: 30px;
+    }
   }
 
   
