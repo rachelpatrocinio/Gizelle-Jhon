@@ -172,8 +172,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
       var pageToGo = document.getElementById(page);
       pageToGo.classList.remove('d-none');
-      pageToGo.classList.add('d-block');
+      pageToGo.classList.add('d-block');      
 
       var menuLink = document.querySelector('.'+page);
       console.log(menuLink);
+      var menuLinkP = menuLink.querySelector(p);
+      p.style.borderBottom = "1px solid #50593C";
     }
