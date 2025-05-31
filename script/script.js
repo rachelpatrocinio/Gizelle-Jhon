@@ -118,6 +118,39 @@ const targetDate = new Date(2025, 9, 11, 15, 30, 0); // Ottobre = 9
 
 function updateCountdown() {
   const now = new Date();
+  let timeLeft = targetDate - now;
+
+  if (timeLeft <= 0) {
+    document.getElementById("countdown").innerHTML = "È arrivato il momento!";
+    return;
+  }
+
+  // Calcolo di base
+  let seconds = Math.floor((timeLeft / 1000) % 60);
+  let minutes = Math.floor((timeLeft / 1000 / 60) % 60);
+  let hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+  let totalDays = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+
+  // Approssimazione dei mesi (considerando media di 30.44 giorni per mese)
+  let months = Math.floor(totalDays / 30.44);
+  let days = Math.floor(totalDays - months * 30.44);
+
+  // Mostra nel DOM
+  document.getElementById("months").textContent = String(months).padStart(2, "0");
+  document.getElementById("days").textContent = String(days).padStart(2, "0");
+  document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+  document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+  document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+/*
+const targetDate = new Date(2025, 9, 11, 15, 30, 0); // Ottobre = 9
+
+function updateCountdown() {
+  const now = new Date();
   const timeLeft = targetDate - now;
 
   if (timeLeft <= 0) {
@@ -138,6 +171,7 @@ function updateCountdown() {
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
+*/
 
 
 // === CLICK MENU ===
