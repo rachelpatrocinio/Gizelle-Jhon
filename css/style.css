@@ -37,14 +37,6 @@ color: currentColor;
 body{
     background-color: #FEF8F8;
 }
-/*
-body{
-    background-image: url('../img/FIORI.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-*/
 
 /* LAYOVER */
 .layover-container{
@@ -130,22 +122,24 @@ body{
   @media screen and (min-width: 789px){
     .carousel-title .title_hero_banner{
         font-size: 80px;
-        text-shadow: 7px 7px 9px rgba(0, 0, 0, 1);
     }
 
     .carousel-title .date_hero_banner{
-      color: white;
       font-size: 30px;
-      text-shadow: 7px 7px 9px rgba(0, 0, 0, 1);
-      letter-spacing: 2px;
     }
   }
 
   
-  .carousel-title h3 {
+  .carousel-title .title_hero_banner{
     color: white;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    text-shadow: 7px 7px 9px rgba(0, 0, 0, 1);
     margin: 0;
+  }
+
+  .carousel-title .date_hero_banner{
+    color: white;
+    text-shadow: 7px 7px 9px rgba(0, 0, 0, 1);
+    letter-spacing: 2px;
   }
   
   /* Immagini e animazione */
@@ -186,7 +180,7 @@ body{
     font-size: 2em;
     text-align: center;
     margin-top: 50px;
-    color: #A34B3E;
+    color: #D78A83;
   }
   .time-box {
     display: inline-block;
