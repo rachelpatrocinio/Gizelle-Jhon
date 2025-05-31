@@ -279,6 +279,7 @@ nav .col-2{
 .title_rsvp{
   font-size: 60px;
   letter-spacing: 4px;
+  cursor: pointer;
 }
 
 .announcement{
