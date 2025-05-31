@@ -103,9 +103,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     goToPage = function(page){
       console.log(page);
+
+      var allPages = document.querySelectorAll('.page');
+      console.log(allPages);
+      allPages.forEach(function(singlePage){
+        singlePage.classList.remove('d-block');
+        singlePage.classList.add('d-none');
+      })
+
       var pageToGo = document.getElementById(page);
       pageToGo.classList.remove('d-none');
       pageToGo.classList.add('d-block');
 
-      
+
+
     }
