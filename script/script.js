@@ -175,12 +175,12 @@ document.addEventListener("DOMContentLoaded", function () {
       pageToGo.classList.add('d-block');      
 
       var allMenuLink = document.querySelectorAll("nav li p");
+      console.log(allMenuLink);
       allMenuLink.forEach(function(singleMenuLink){
         singleMenuLink.borderBottom = "";
       })
 
       var menuLink = document.querySelector('.'+page);
-      console.log(menuLink);
       setTimeout(function(){
         var menuLinkP = menuLink.querySelector('p');
         menuLinkP.style.borderBottom = "1px solid #50593C";
