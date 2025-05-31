@@ -1,3 +1,4 @@
+/*
 let touchStartY = 0;
 let touchEndY = 0;
 const threshold = 50; // distanza minima per considerare swipe
@@ -37,6 +38,58 @@ document.addEventListener('click', e => {
     hideOverlay();
   }
 });
+*/
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Rimuove backlink se esiste
+  var element = document.getElementById("backlink");
+  if (element) {
+    element.remove();
+  }
+
+  // Riferimento agli elementi
+  const overlay = document.querySelector('.layover-container');
+  const audio = document.getElementById('bg-music');
+
+  // Funzione per nascondere layover e far partire musica
+  function hideOverlayAndPlayMusic() {
+    if (!overlay) return;
+
+    overlay.style.opacity = '0';
+
+    setTimeout(() => {
+      overlay.style.display = 'none';
+    }, 500);
+
+    // Prova ad avviare la musica
+    audio.play().catch(() => {
+      console.log("Autoplay bloccato, attendi interazione");
+    });
+
+    // Rimuove i fallback listener
+    window.removeEventListener('click', playAudio);
+    window.removeEventListener('scroll', playAudio);
+    window.removeEventListener('touchstart', playAudio);
+  }
+
+  // Dopo 2 secondi: nasconde il layover e prova ad avviare la musica
+  setTimeout(hideOverlayAndPlayMusic, 2000);
+
+  // Fallback: se autoplay è bloccato, avvia su interazione
+  function playAudio() {
+    audio.play().catch(() => {
+      console.log("Autoplay bloccato, attendi interazione");
+    });
+    window.removeEventListener('click', playAudio);
+    window.removeEventListener('scroll', playAudio);
+    window.removeEventListener('touchstart', playAudio);
+  }
+
+  window.addEventListener('click', playAudio);
+  window.addEventListener('scroll', playAudio);
+  window.addEventListener('touchstart', playAudio);
+});
+
 
 
 
@@ -63,6 +116,10 @@ audio.play().catch(() => {
 window.addEventListener('click', playAudio);
 window.addEventListener('scroll', playAudio);
 window.addEventListener('touchstart', playAudio);
+
+
+
+
 
 
 
