@@ -177,5 +177,5 @@ document.addEventListener("DOMContentLoaded", function () {
       var menuLink = document.querySelector('.'+page);
       console.log(menuLink);
       var menuLinkP = menuLink.querySelector(p);
-      p.style.borderBottom = "1px solid #50593C";
+      menuLinkP.style.borderBottom = "1px solid #50593C";
     }
