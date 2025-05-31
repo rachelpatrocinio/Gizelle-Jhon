@@ -164,7 +164,6 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(page);
 
       var allPages = document.querySelectorAll('.page');
-      console.log(allPages);
       allPages.forEach(function(singlePage){
         singlePage.classList.remove('d-block');
         singlePage.classList.add('d-none');
@@ -177,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var allMenuLink = document.querySelectorAll("nav li p");
       console.log(allMenuLink);
       allMenuLink.forEach(function(singleMenuLink){
-        singleMenuLink.borderBottom = "";
+        singleMenuLink.style.borderBottom = "";
       })
 
       var menuLink = document.querySelector('.'+page);
