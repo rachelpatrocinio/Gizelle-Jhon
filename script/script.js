@@ -158,6 +158,8 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCountdown(); // Aggiorna subito
     setInterval(updateCountdown, 1000); // Poi ogni secondo
 
+
+    // CLICK MENU 
     goToPage = function(page){
       console.log(page);
 
@@ -172,6 +174,6 @@ document.addEventListener("DOMContentLoaded", function () {
       pageToGo.classList.remove('d-none');
       pageToGo.classList.add('d-block');
 
-
-
+      var menuLink = document.querySelector('.'+page);
+      console.log(menuLink);
     }
