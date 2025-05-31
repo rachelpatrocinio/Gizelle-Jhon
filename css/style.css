@@ -202,13 +202,13 @@ body{
 
 /* NAV */
 nav .col-2{
-    font-size: 10px;
+    font-size: 20px;
     cursor: pointer;
 }
 
 @media screen and (min-width: 789px){
     nav .col-2{
-        font-size: 20px;
+        font-size: 25px;
     }
 }
 
