@@ -13,24 +13,6 @@
 */
   
 
-.merriweather{
-    font-family: "Merriweather", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
-  }
-  
-
-.dancing-script {
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-
-
 *{
     padding: 0 !important;
     margin: 0 !important;
