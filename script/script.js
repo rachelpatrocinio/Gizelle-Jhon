@@ -175,7 +175,9 @@ document.addEventListener("DOMContentLoaded", function () {
       pageToGo.classList.add('d-block');      
 
       var allMenuLink = document.querySelectorAll("nav li p");
-      allMenuLink.borderBottom = "";
+      allMenuLink.forEach(function(singleMenuLink){
+        singleMenuLink.borderBottom = "";
+      })
 
       var menuLink = document.querySelector('.'+page);
       console.log(menuLink);
