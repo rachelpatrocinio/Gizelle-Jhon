@@ -221,6 +221,7 @@ body{
 /* NAV */
 nav .col-2{
     font-size: 10px;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 789px){
