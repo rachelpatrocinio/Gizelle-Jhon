@@ -63,19 +63,17 @@ body{
     background: #FEF8F8;;
 }
 
-.img-flower{
-    position: fixed;
+.img-flower-right{
     width: 150px;
     right: -30px;
     top: -20px;
     z-index: -1;
 }
 
-.img-flower1{
-    position: fixed;
-    width: 150px;
-    left: -30px;
-    top: -20px;
+.img-flower-left{
+    width: 400px;
+    left: -40px;
+    top: -120px;
     transform: scaleX(-1);
     z-index: -1;
 }
@@ -140,6 +138,7 @@ body{
       color: white;
       font-size: 30px;
       text-shadow: 7px 7px 9px rgba(0, 0, 0, 1);
+      letter-spacing: 2px;
     }
   }
 
@@ -268,6 +267,24 @@ nav .col-2{
   width: 100%;
   object-fit: cover; /* fa il "crop" e riempie tutto */
   object-position: center;
+}
+
+/*HOME*/
+
+.home_details{
+  letter-spacing: 2px;
+  color: #50593C;
+}
+
+.home_matrimonio_string{
+  font-size: 60px;
+  letter-spacing: 4px;
+}
+
+.announcement{
+  position: relative;
+  top: 200px;
+  left: -70px;
 }
 
 
