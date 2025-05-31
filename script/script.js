@@ -176,6 +176,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       var menuLink = document.querySelector('.'+page);
       console.log(menuLink);
-      var menuLinkP = menuLink.querySelector(p);
-      menuLinkP.style.borderBottom = "1px solid #50593C";
+      setTimeput(function(){
+        var menuLinkP = menuLink.querySelector(p);
+        menuLinkP.style.borderBottom = "1px solid #50593C";
+      },200)
+
     }
