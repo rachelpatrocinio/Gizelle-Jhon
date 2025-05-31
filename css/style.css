@@ -71,21 +71,20 @@ body{
 }
 
 .img-flower-left{
-    width: 400px;
+    width: 350px;
     left: -40px;
     top: -120px;
     transform: scaleX(-1);
     z-index: -1;
 }
 
-
-.img-flower2{
-    position: fixed;
-    width: 150px;
-    left: -30px;
-    bottom: -20px;
-    transform: rotate(180deg);
-    z-index: -1;
+.img-flower-down-right{
+  width: 350px;
+  position: relative;
+  top: 200px;
+  right: -180px;
+  transform: scaleY(-1);
+  z-index: -1;
 }
 
 .logo-header{
@@ -276,7 +275,8 @@ nav .col-2{
   color: #50593C;
 }
 
-.home_matrimonio_string{
+.home_matrimonio_string,
+.title_rsvp{
   font-size: 60px;
   letter-spacing: 4px;
 }
@@ -287,6 +287,16 @@ nav .col-2{
   left: -70px;
 }
 
+.reception{
+  position: relative;
+  top: 100px;
+  right: -250px;
+}
+
+.img-reception{
+  position: relative;
+  left:150px;
+}
 
 /* FOOTER */
 /*
