@@ -179,8 +179,8 @@ body{
   #countdown {
     text-align: center;
     margin-top: 50px;
-    color: #D78A83;
-  }
+    color: #9A352A;
+}
   .time-box {
     display: inline-block;
     margin: 0 10px;
@@ -290,6 +290,27 @@ nav .col-2{
 .img-reception{
   position: relative;
   left:150px;
+}
+
+
+/* OUR STORY */
+#our_story{
+  color: #50593C;
+}
+#our_story h1{
+  font-size: 70px;
+  color: #9A352A;
+}
+
+#our_story .col-3 img{
+  width: 100% !important;
+  object-fit: cover;
+  max-height: 400px;
+}
+
+.insieme_a_voi_string{
+  color: #9A352A;
+  font-size: 70px;
 }
 
 /* FOOTER */
