@@ -174,6 +174,9 @@ document.addEventListener("DOMContentLoaded", function () {
       pageToGo.classList.remove('d-none');
       pageToGo.classList.add('d-block');      
 
+      var allMenuLink = document.querySelectorAll("nav li p");
+      allMenuLink.borderBottom = "";
+
       var menuLink = document.querySelector('.'+page);
       console.log(menuLink);
       setTimeout(function(){
