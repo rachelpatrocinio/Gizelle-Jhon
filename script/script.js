@@ -100,3 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
     updateCountdown(); // Aggiorna subito
     setInterval(updateCountdown, 1000); // Poi ogni secondo
+
+    goToPage = function(page){
+      console.log(page);
+    }
