@@ -103,4 +103,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     goToPage = function(page){
       console.log(page);
+      var pageToGo = document.getElementById(page);
+      pageToGo.classList.remove('d-none');
+      pageToGo.classList.add('d-block');
+
+      
     }
