@@ -317,6 +317,21 @@ nav .col-2{
   font-size: 25px;
 }
 
+.menu-mobile .flower-container-left{
+  position: absolute;
+  width: 300px;
+  top: -67px;
+  left: -118px;
+}
+
+.menu-mobile .flower-container-right{
+  position: absolute;
+  width: 300px;
+  right: -102px;
+  bottom: -70px;
+}
+
+
 @media screen and (min-width: 789px){
     nav .col-2{
         font-size: 30px;
