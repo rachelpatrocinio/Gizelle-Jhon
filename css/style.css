@@ -102,9 +102,17 @@ body{
 .flower-container-left{
   position: absolute;
   width: 150px;
-  top: -10px;
-  left: -45px;
+  top: -23px;
+  left: -50px;
 }
+
+.flower-container-right{
+  position: absolute;
+  width: 150px;
+  right: -50px;
+  bottom: -70px;
+}
+
 
 .img-flower-left{
     width: 350px;
@@ -115,10 +123,13 @@ body{
 }
 
 .img-flower-down-right{
+  /*
   width: 350px;
   position: relative;
   top: 200px;
   right: -120px;
+  */
+
   transform: scaleY(-1);
   z-index: -1;
 }
