@@ -56,6 +56,10 @@
   font-size: 40px;
 }
 
+.font-45{
+  font-size: 45px;
+}
+
   
 
 *{
@@ -419,8 +423,9 @@ nav .col-2{
 #our_story{
   color: #50593C;
 }
-#our_story h1{
-  font-size: 70px;
+#our_story h1:not(.font-45){
+  font-size: 60px;
+  /*font-size: 70px;*/
   color: #9A352A;
 }
 
@@ -432,7 +437,8 @@ nav .col-2{
 
 .insieme_a_voi_string{
   color: #9A352A;
-  font-size: 70px;
+  font-size: 60px;
+  /*font-size: 70px;*/
 }
 
 /* Q & A*/
