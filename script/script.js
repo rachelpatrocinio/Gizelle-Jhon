@@ -175,7 +175,7 @@ setInterval(updateCountdown, 1000);
 
 
 // === CLICK MENU ===
-function goToPage(page) {
+function goToPage(page, mobile) {
   var hamburgerMenu = document.querySelector('.menu-mobile');
   if(hamburgerMenu){
     hamburgerMenu.classList.remove('d-block');
@@ -201,7 +201,11 @@ function goToPage(page) {
   if (menuLink) {
     setTimeout(() => {
       const menuLinkP = menuLink.querySelector('p');
-      if (menuLinkP) menuLinkP.style.borderBottom = "1px solid #50593C";
+      if (menuLinkP && !mobile){
+        menuLinkP.style.borderBottom = "1px solid #50593C";
+      } else {
+        menuLinkP.style.borderBottom = "1px solid #9A352A";
+      }
     }, 50);
   }
 }

@@ -313,6 +313,10 @@ nav .col-2{
   top: 0;
 }
 
+.nav-mobile{
+  font-size: 25px;
+}
+
 @media screen and (min-width: 789px){
     nav .col-2{
         font-size: 30px;
