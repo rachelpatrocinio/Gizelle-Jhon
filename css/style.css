@@ -11,6 +11,18 @@
   font-style: normal;
 }
 
+.list-style-none{
+  list-style: none;
+}
+
+.list-style-circle{
+  list-style: circle;
+}
+
+.color-green{
+  color: #50593C;
+}
+
   
 
 *{
@@ -324,10 +336,6 @@ nav .col-2{
 
 #q_e_a .response{
   color: #50593C;
-}
-
-#q_e_a ul{
-  list-style: circle;
 }
 
 /* FOOTER */
