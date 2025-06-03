@@ -115,9 +115,11 @@ body{
 
 
 .img-flower-left{
+  /*
     width: 350px;
     left: -30px;
     top: -120px;
+    */
     transform: scaleX(-1);
     z-index: -1;
 }
@@ -129,7 +131,6 @@ body{
   top: 200px;
   right: -120px;
   */
-
   transform: scaleY(-1);
   z-index: -1;
 }
