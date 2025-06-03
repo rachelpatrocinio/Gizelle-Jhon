@@ -176,7 +176,11 @@ setInterval(updateCountdown, 1000);
 
 // === CLICK MENU ===
 function goToPage(page) {
-  console.log(page);
+  var hamburgerMenu = document.querySelector('.menu-mobile');
+  if(hamburgerMenu){
+    hamburgerMenu.classList.remove('d-block');
+    hamburgerMenu.classList.add('d-none');
+  }
 
   const allPages = document.querySelectorAll('.page');
   allPages.forEach(p => {
@@ -199,5 +203,16 @@ function goToPage(page) {
       const menuLinkP = menuLink.querySelector('p');
       if (menuLinkP) menuLinkP.style.borderBottom = "1px solid #50593C";
     }, 50);
+  }
+}
+
+
+// == HAMBURGER MENU == 
+function openHamburgeMenu(){
+  console.log('Open hamburger');
+  var hamburgerMenu = document.querySelector('.menu-mobile');
+  if(hamburgerMenu){
+    hamburgerMenu.classList.remove('d-none');
+    hamburgerMenu.classList.add('d-block');
   }
 }

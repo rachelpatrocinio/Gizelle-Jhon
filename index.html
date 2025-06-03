@@ -26,10 +26,36 @@
     </div>
 </section>
 
+<section class="menu-mobile d-none">
+    <nav class="nav-mobile">
+        <ul>
+            <li onclick="goToPage('home')" class="alex-brush-regular text-center p-3 home" >
+                <p>Home</p>
+            </li>
+            <li onclick="goToPage('details')" class="alex-brush-regular text-center p-3 details">
+                <p>Details</p>
+            </li>
+            <li onclick="goToPage('q_e_a')" class="alex-brush-regular text-center p-3 q_e_a">
+                <p>Q&A</p>
+            </li>
+            <li onclick="goToPage('our_story')" class="alex-brush-regular text-center p-3 our_story">
+                <p>Our story</p>
+            </li>
+            <li  onclick="goToPage('honeymoon')" class="alex-brush-regular text-center p-3 honeymoon">
+                <p>Honeymoon</p>
+            </li>
+            <li onclick="goToPage('rsvp')" class="alex-brush-regular text-center p-3 rsvp">
+                <p>Rsvp</p>
+            </li>
+        </ul>
+    </nav>
+    
+</section>
+
 <header class="d-flex flex-column align-items-center">
     <div class="container">
         <div class="row flex-column align-items-center">
-            <img class="d-md-none hamburger-menu" src="./icons/menu.png">
+            <img class="d-md-none hamburger-menu" onclick="openHamburgeMenu()" src="./icons/menu.png">
             <img onclick="goToPage('home')" class="logo-header" src="./img/MONOGRAMMA-removebg-preview.png">
         </div>
     </div>
@@ -146,15 +172,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="alex-brush-regular ms-3 section-title">Come arrivare alla chiesa dove si terrà la cerimonia?</h1>
-                    <h4 class="lora ms-5 color-green">CHIESA DI SANT'ANSELMO ALL'AVENTINO </h4>
-                    <h5 class="lora ms-5 color-green">📍Piazza dei Cavalieri di Malta, 5, 00153 Roma RM</h5>
+                    <h1 class="alex-brush-regular ms-3 section-title font-2">Come arrivare alla chiesa dove si terrà la cerimonia?</h1>
+                    <h4 class="lora ms-5 color-green font-14">CHIESA DI SANT'ANSELMO ALL'AVENTINO </h4>
+                    <h5 class="lora ms-5 color-green font-14">📍Piazza dei Cavalieri di Malta, 5, 00153 Roma RM</h5>
                     <div class="d-flex flex-column flex-md-row lora response">
                         <div class="col-12 col-md-6">
                             <ul class="p-5 list-style-none">
                                 <li>
                                     <h3 class="alex-brush-regular"> 🚗 In auto</h3>
-                                    <ul class="lora list-style-circle">
+                                    <ul class="lora list-style-circle font-14">
                                         <li> <strong>Parcheggio in zona:</strong> L’area dell’Aventino è residenziale e con posti auto limitati. Ti consigliamo di arrivare in anticipo per trovare parcheggio. <br> Le zone migliori dove cercare posto sono:
                                             <ul class="list-style-circle">
                                                 <li class="ms-5">
