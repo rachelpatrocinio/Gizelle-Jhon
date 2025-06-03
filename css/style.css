@@ -200,7 +200,8 @@ body{
   }
   
   /* Immagini e animazione */
-  .carousel-container {
+  .carousel-container,
+  .carousel-container2 {
     width: 100%;
     overflow: hidden;
     background: #000; /* facoltativo */
@@ -406,7 +407,7 @@ nav .col-2{
 
 /* MENU MOBILE */
 .menu-mobile{
-  width:100%;
+  width:100vw;
   height: 100vh;
   background-color: #FEF8F8;
   position: fixed;
@@ -422,6 +423,7 @@ nav .col-2{
 /* OUR STORY */
 #our_story{
   color: #50593C;
+  width: 100vw;
 }
 #our_story h1:not(.font-45){
   font-size: 60px;
