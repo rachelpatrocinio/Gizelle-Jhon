@@ -111,28 +111,19 @@ body{
   width: 150px;
   right: -50px;
   bottom: -70px;
+  overflow: hidden;
 }
 
 
 .img-flower-left{
-  /*
-    width: 350px;
-    left: -30px;
-    top: -120px;
-    */
     transform: scaleX(-1);
     z-index: -1;
 }
 
 .img-flower-down-right{
-  /*
-  width: 350px;
-  position: relative;
-  top: 200px;
-  right: -120px;
-  */
   transform: scaleY(-1);
   z-index: -1;
+  object-fit: cover;
 }
 
 .logo-header{
@@ -369,6 +360,10 @@ nav .col-2{
 .home_details{
   letter-spacing: 2px;
   color: #50593C;
+}
+
+.home_details .container{
+  overflow-x: clip;
 }
 
 .home_matrimonio_string,
