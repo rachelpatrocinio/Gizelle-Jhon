@@ -99,6 +99,13 @@ body{
     z-index: -1;
 }
 
+.flower-container-left{
+  position: absolute;
+  width: 150px;
+  top: 6px;
+  left: -36px;
+}
+
 .img-flower-left{
     width: 350px;
     left: -30px;
