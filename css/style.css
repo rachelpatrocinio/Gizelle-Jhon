@@ -470,6 +470,10 @@ nav .col-2{
   max-height: 400px;
 }
 
+.our_story_description{
+  letter-spacing: 1px;
+}
+
 .insieme_a_voi_string{
   color: #9A352A;
   font-size: 60px;
