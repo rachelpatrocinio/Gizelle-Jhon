@@ -486,6 +486,11 @@ nav .col-2{
   object-fit: cover;
 }
 
+#honeymoon h6{
+  letter-spacing: 2px;
+  font-size: 10px;
+}
+
 .honeymoon_title{
   color: white;
   position: absolute;
