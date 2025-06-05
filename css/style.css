@@ -515,6 +515,28 @@ nav .col-2{
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+#details .fiore_4{
+  position: absolute;
+  width: 50px;
+  top: 0;
+  left: 0;
+}
+
+#details .fiore_5{
+  position: absolute;
+  width: 50px;
+  top: 0;
+  right: 0;
+}
+
+#details .fiore_5_down{
+  position: absolute;
+  width: 50px;
+  bottom: 0;
+  left: 0;
+  transform: scale(-1, -1);
+}
+
 
 
 
