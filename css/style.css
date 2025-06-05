@@ -511,6 +511,11 @@ nav .col-2{
   z-index: 99;
 }
 
+.honeymoon_description div{
+  letter-spacing: 1px;
+  border: 2px solid #9A352A;
+}
+
 .object-position-left img{
   object-position: left !important;
 }
