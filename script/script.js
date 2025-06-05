@@ -1,4 +1,6 @@
 // === OVERLAY SWIPE & CLICK ===
+/*
+
 let touchStartY = 0;
 let touchEndY = 0;
 const threshold = 50; // distanza minima per considerare swipe
@@ -12,7 +14,6 @@ function hideOverlay() {
     overlay.style.display = 'none';
   }, 500);
 }
-/*
 
 function handleGesture() {
   if (Math.abs(touchEndY - touchStartY) > threshold) {
@@ -28,7 +29,6 @@ document.addEventListener('touchend', e => {
   touchEndY = e.changedTouches[0].screenY;
   handleGesture();
 });
-*/
 
 document.addEventListener('click', e => {
   const overlay = document.querySelector('.layover-container');
@@ -39,6 +39,8 @@ document.addEventListener('click', e => {
     hideOverlay();
   }
 });
+*/
+
 
 
 // === DOMCONTENTLOADED INIT ===
