@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Nasconde overlay dopo 2s e tenta autoplay
-  setTimeout(hideOverlayAndPlayMusic, 2000);
+  setTimeout(hideOverlayAndPlayMusic, 1000);
 
   // Fallback se autoplay è bloccato
   function playAudio() {

@@ -477,17 +477,24 @@ nav .col-2{
 }
 
 /* Q & A*/
+#q_e_a ul,
+#q_e_a h5{
+  letter-spacing: 1px;
+}
+
 #q_e_a h1{
   color: #9A352A;
 }
 
 #q_e_a p{
   color: #50593C;
+  letter-spacing: 1px;
 }
 
 #q_e_a .response{
   color: #50593C;
 }
+
 
 /* HONEYMOON */
 
