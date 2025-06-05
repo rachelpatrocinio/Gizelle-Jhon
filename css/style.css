@@ -87,6 +87,12 @@ body{
     background-color: #FEF8F8;
 }
 
+body.menu-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
 /* LAYOVER */
 .layover-container{
     position: fixed;
@@ -436,7 +442,6 @@ nav .col-2{
   left: 0;
   bottom: 0;
   z-index: 100;
-  overflow: hidden;
 }
 
 
