@@ -27,6 +27,24 @@
   color: #9A352A;
 }
 
+.bg-light-pink{
+  /*background-color: rgba(154, 53, 42, 0.1);*/
+  background-color: rgba(184, 198, 173, 0.2);
+
+}
+
+.bg-medium-pink{
+  /*background-color: rgba(154, 53, 42, 0.2);*/
+  background-color: rgba(184, 198, 173, 0.4);
+
+}
+
+.bg-dark-pink{
+  /*background-color: rgba(154, 53, 42, 0.3);*/
+  background-color: rgba(184, 198, 173, 0.6);
+
+}
+
 
 .font-08{
   font-size: 8px;
@@ -92,6 +110,8 @@ body.menu-open {
   position: fixed;
   width: 100%;
 }
+
+
 
 /* LAYOVER */
 .layover-container{
@@ -481,6 +501,15 @@ nav .col-2{
   left:150px;
 }
 */
+
+/* DETAILS */
+#details h1{
+  letter-spacing: 2px;
+}
+
+#details .col-12{
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
 
 
