@@ -286,6 +286,7 @@ body.menu-open {
     margin-top: 50px;
     color: #9A352A;
     background-color: rgba(154, 53, 42, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
 
   .time-box {
@@ -531,4 +532,11 @@ nav .col-2{
 
 .object-position-left img{
   object-position: left !important;
+}
+
+
+/* FOOTER */
+footer h6{
+  opacity: 0.3;
+  font-size: 8px;
 }
