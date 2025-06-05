@@ -475,12 +475,20 @@ nav .col-2{
   color: #50593C;
 }
 
-/* FOOTER */
-/*
-footer{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+/* HONEYMOON */
+
+.honeymoon_banner{
+  position: relative;
 }
-*/
+
+#honeymoon img{
+  height: 100px;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.honeymoon_title{
+  color: white;
+  position: absolute;
+  z-index: 99;
+}
