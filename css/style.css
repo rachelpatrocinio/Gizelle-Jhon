@@ -503,8 +503,12 @@ nav .col-2{
 */
 
 /* DETAILS */
-#details h1{
+#details h3{
   letter-spacing: 2px;
+}
+
+#details p{
+  letter-spacing: 1px;
 }
 
 #details .col-12{
