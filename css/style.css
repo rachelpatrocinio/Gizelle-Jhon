@@ -99,9 +99,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
+    z-index: 99;
     transition: opacity 2s ease;
     background: #FEF8F8;;
+    pointer-events: none;
 }
 
 .img-flower-right{
