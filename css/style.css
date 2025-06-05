@@ -287,6 +287,36 @@ body.menu-open {
     color: #9A352A;
     background-color: rgba(154, 53, 42, 0.1);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+  .countdown .fiore_1{
+    position: absolute;
+    width: 30px;
+    top: 22px;
+    left: 4px;
+  }
+  /*
+  .countdown .fiore_2{
+    position: absolute;
+    width: 50px;
+    top: -20px;
+    left: 10px;
+  }
+  */
+
+  .countdown .fiore_4{
+    position: absolute;
+    width: 50px;
+    top: 0px;
+    left: 0px;
+  }
+
+  .countdown .fiore_5{
+    position: absolute;
+    width: 50px;
+    top: 0px;
+    right: 0px;
   }
 
   .time-box {
