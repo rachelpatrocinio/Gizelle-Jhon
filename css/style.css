@@ -546,6 +546,10 @@ nav .col-2{
   transform: scaleY(-1);
 }
 
+#details .downtitle{
+  width: 200px;
+}
+
 
 
 #details .fiore_5{
