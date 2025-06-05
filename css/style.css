@@ -503,3 +503,7 @@ nav .col-2{
   position: absolute;
   z-index: 99;
 }
+
+.object-position-left img{
+  object-position: left !important;
+}
