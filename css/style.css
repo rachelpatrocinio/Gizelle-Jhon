@@ -285,7 +285,7 @@ body.menu-open {
     text-align: center;
     margin-top: 50px;
     color: #9A352A;
-    background-color: rgba(154, 53, 42, 0.1);
+    background-color: rgba(154, 53, 42, 0.06);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     position: relative;
   }
