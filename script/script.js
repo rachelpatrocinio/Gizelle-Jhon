@@ -179,7 +179,7 @@ setInterval(updateCountdown, 1000);
 
 // === CLICK MENU ===
 function goToPage(page, mobile) {
-  var body = document.querySelector(body);
+  var body = document.querySelector('body');
   body.classList.remove('menu-open');
   var hamburgerMenu = document.querySelector('.menu-mobile');
   if(hamburgerMenu){
@@ -224,6 +224,6 @@ function openHamburgeMenu(){
     hamburgerMenu.classList.remove('d-none');
     hamburgerMenu.classList.add('d-block');
   }
-  var body = document.querySelector(body);
+  var body = document.querySelector('body');
   body.classList.add('menu-open');
 }
