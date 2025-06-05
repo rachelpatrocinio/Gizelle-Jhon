@@ -322,6 +322,24 @@ nav .col-2{
 
 .nav-mobile{
   font-size: 25px;
+  z-index: 100;
+}
+
+/* MENU MOBILE */
+.menu-mobile{
+  width:100vw;
+  height: 100vh;
+  background-color: #FEF8F8;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.menu-mobile ul li{
+  z-index: 100;
 }
 
 .menu-mobile .flower-container-left{
@@ -431,18 +449,7 @@ nav .col-2{
 }
 */
 
-/* MENU MOBILE */
-.menu-mobile{
-  width:100vw;
-  height: 100vh;
-  background-color: #FEF8F8;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 100;
-}
+
 
 
 
