@@ -12,6 +12,7 @@ function hideOverlay() {
     overlay.style.display = 'none';
   }, 500);
 }
+/*
 
 function handleGesture() {
   if (Math.abs(touchEndY - touchStartY) > threshold) {
@@ -19,7 +20,6 @@ function handleGesture() {
     hideOverlay();
   }
 }
-
 document.addEventListener('touchstart', e => {
   touchStartY = e.changedTouches[0].screenY;
 });
@@ -28,6 +28,7 @@ document.addEventListener('touchend', e => {
   touchEndY = e.changedTouches[0].screenY;
   handleGesture();
 });
+*/
 
 document.addEventListener('click', e => {
   const overlay = document.querySelector('.layover-container');
