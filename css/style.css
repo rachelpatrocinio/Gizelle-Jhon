@@ -285,7 +285,9 @@ body.menu-open {
     text-align: center;
     margin-top: 50px;
     color: #9A352A;
-}
+    background-color: rgba(154, 53, 42, 0.1);
+  }
+
   .time-box {
     display: inline-block;
     margin: 0 10px;
