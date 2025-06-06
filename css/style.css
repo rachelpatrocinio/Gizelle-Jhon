@@ -378,6 +378,18 @@ nav .col-2{
   z-index: 100;
 }
 
+.nav-desktop{
+  font-size: 30px;
+}
+
+.nav-desktop li{
+  cursor: pointer;
+}
+
+.nav-desktop li p:hover{
+  border-bottom: 1px solid #50593C;
+}
+
 /* MENU MOBILE */
 .menu-mobile{
   width:100vw;
@@ -586,10 +598,14 @@ nav .col-2{
 
 #details .dress_code_img{
   width: 160px;
+  height: 150px;
+  object-fit: contain;
 }
 
 #details .gift_img{
   width: 120px;
+  height: 150px;
+  object-fit: contain;
 }
 
 
@@ -645,11 +661,16 @@ nav .col-2{
 
 /* HONEYMOON */
 
+#honeymoon .downtitle{
+  width: 200px;
+  object-fit: contain;
+}
+
 .honeymoon_banner{
   position: relative;
 }
 
-#honeymoon img{
+#honeymoon img:not(.downtitle){
   height: 100px;
   object-fit: cover;
 }
