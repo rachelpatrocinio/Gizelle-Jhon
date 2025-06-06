@@ -716,7 +716,7 @@ nav .col-2{
 
 @media screen and(min-width: 789px){
   #honeymoon img:not(.downtitle){
-    height: 300px !important;
+    height: 300px;
   }
 }
 
