@@ -46,8 +46,13 @@ document.addEventListener('click', e => {
 // === DOMCONTENTLOADED INIT ===
 document.addEventListener("DOMContentLoaded", function () {
   // Evidenzia menu attivo
-  const activeMenu = document.querySelector('.home p');
-  if (activeMenu) activeMenu.style.borderBottom = "1px solid #50593C";
+  const activeMenus = document.querySelectorAll('.home');
+  if (activeMenus){
+    activeMenus.forEach(function(activeMenu){
+      var p = activeMenu.querySelector('p');
+      p.style.borderBottom = "1px solid #50593C";
+    })
+  } 
 
   // Rimuove backlink se esiste
   const backlink = document.getElementById("backlink");
@@ -202,16 +207,12 @@ function goToPage(page, mobile) {
   const allMenuLinks = document.querySelectorAll("nav li p");
   allMenuLinks.forEach(link => link.style.borderBottom = "");
 
-  const menuLink = document.querySelector(`.${page}`);
-  if (menuLink) {
-    setTimeout(() => {
-      const menuLinkP = menuLink.querySelector('p');
-      if (menuLinkP && !mobile){
-        menuLinkP.style.borderBottom = "1px solid #50593C";
-      } else {
-        menuLinkP.style.borderBottom = "1px solid #9A352A";
-      }
-    }, 50);
+  const menuLinks = document.querySelectorAll('.'+page);
+  if (menuLinks) {
+    menuLinks.forEach(function(menuLink){
+      var p = menuLink.querySelector('p');
+      p.style.borderBottom = "1px solid #50593C";
+    })
   }
 }
 

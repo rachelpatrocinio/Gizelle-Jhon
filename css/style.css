@@ -632,6 +632,12 @@ nav .col-2{
   font-size: 35px;
 }
 
+@media screen and(min-width: 768px){
+  #our_story .la_nostra_stroria_string{
+    font-size: 60px;
+  }
+}
+
 #our_story .col-3 img{
   width: 100% !important;
   object-fit: cover;
