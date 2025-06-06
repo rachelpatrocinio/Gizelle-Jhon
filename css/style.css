@@ -350,6 +350,17 @@ body.menu-open {
         min-width: 100px;
         font-size: 35px;
     }
+
+    .countdown .fiore_5,
+    .countdown .fiore_4{
+      width: 90px;
+    }
+
+    .countdown .fiore_1{
+      top: 50px;
+    }
+
+    
   }
   .label {
     font-size: 0.5em;
@@ -632,9 +643,15 @@ nav .col-2{
   font-size: 35px;
 }
 
-@media screen and(min-width: 768px){
-  #our_story .la_nostra_stroria_string{
+@media screen and (min-width: 789px){
+  #our_story .la_nostra_stroria_string,
+  #our_story .amore_string,
+  #our_story .insieme_a_voi_string{
     font-size: 60px;
+  }
+
+  #our_story .our_story_description{
+    font-size: 16px;
   }
 }
 
@@ -696,6 +713,14 @@ nav .col-2{
   height: 100px;
   object-fit: cover;
 }
+
+@media screen and(min-width: 789px){
+  #honeymoon img:not(.downtitle){
+    height: 300px !important;
+  }
+}
+
+
 
 #honeymoon h6{
   letter-spacing: 2px;
