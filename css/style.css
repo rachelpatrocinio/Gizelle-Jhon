@@ -617,10 +617,19 @@ nav .col-2{
   color: #50593C;
   width: 100vw;
 }
-#our_story h1:not(.font-45){
-  font-size: 60px;
+
+#our_story .downtitle{
+  width: 200px;
+}
+
+.amore_string{
+  font-size: 50px;
   /*font-size: 70px;*/
   color: #9A352A;
+}
+
+#our_story .la_nostra_stroria_string{
+  font-size: 35px;
 }
 
 #our_story .col-3 img{
@@ -631,11 +640,12 @@ nav .col-2{
 
 .our_story_description{
   letter-spacing: 1px;
+  font-size: 11px;
 }
 
 .insieme_a_voi_string{
   color: #9A352A;
-  font-size: 60px;
+  font-size: 50px;
   /*font-size: 70px;*/
 }
 
@@ -658,6 +668,10 @@ nav .col-2{
   color: #50593C;
 }
 
+#q_e_a .downtitle{
+  width: 200px;
+}
+
 
 /* HONEYMOON */
 
@@ -670,6 +684,8 @@ nav .col-2{
   position: relative;
 }
 
+
+
 #honeymoon img:not(.downtitle){
   height: 100px;
   object-fit: cover;
@@ -677,7 +693,7 @@ nav .col-2{
 
 #honeymoon h6{
   letter-spacing: 2px;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .honeymoon_title{
@@ -689,6 +705,7 @@ nav .col-2{
 .honeymoon_description div{
   letter-spacing: 1px;
   border: 2px solid #9A352A;
+  font-size: 11px;
 }
 
 .object-position-left img{
@@ -700,4 +717,9 @@ nav .col-2{
 footer h6{
   opacity: 0.3;
   font-size: 10px;
+}
+
+/* RSVP */
+#rsvp .downtitle{
+  width: 200px;
 }
