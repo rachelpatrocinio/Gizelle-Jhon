@@ -506,6 +506,34 @@ nav .col-2{
   cursor: pointer;
 }
 
+@media screen and (min-width: 789px){
+  #home .flower-container-left,
+  #home .flower-container-right {
+    width: 300px;
+  }
+
+  #home .announcement{
+    padding-left: 100px !important;
+    padding-top: 60px !important;
+  }
+
+  #home .reception{
+    margin-right: 100px !important; 
+  }
+
+  #home .announcement .font-1,
+  #home .reception .font-1{
+    font-size: 30px;
+  }
+
+  #home .announcement .font-3,
+  #home .reception .font-3{
+    font-size: 70px;
+  }
+}
+
+
+
 /*
 .announcement{
   position: relative;
@@ -707,14 +735,16 @@ nav .col-2{
   position: relative;
 }
 
-
-
 #honeymoon img:not(.downtitle){
   height: 100px;
   object-fit: cover;
 }
 
-@media screen and(min-width: 789px){
+@media screen and (min-width: 789px){
+  .honeymoon_description{
+    font-size: 16px;
+  }
+
   #honeymoon img:not(.downtitle){
     height: 300px;
   }
