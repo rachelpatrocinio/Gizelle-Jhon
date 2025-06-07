@@ -225,6 +225,7 @@ function goToPage(page) {
     document.getElementById("error").textContent = "";
     document.getElementById("messageOfConfirm").classList.remove('d-block');
     document.getElementById("messageOfConfirm").classList.add('d-none');
+    document.getElementById("messaggioConferma").style.display = "none";
   }
 }
 
@@ -266,10 +267,9 @@ document.getElementById('rsvpForm').addEventListener('submit', function (e) {
       document.getElementById("rsvpForm").classList.remove('d-block');
       document.getElementById("rsvpForm").classList.add('d-none');
       document.getElementById("error").textContent = "";
-      document.getElementById("messaggioConferma").style.display = "block";
       document.getElementById("messageOfConfirm").classList.remove('d-none');
       document.getElementById("messageOfConfirm").classList.add('d-block');
-
+      document.getElementById("messaggioConferma").style.display = "block";
     } else {
       alert("Errore nell'invio. Riprova.");
     }
@@ -526,7 +526,6 @@ document.getElementById('rsvpForm').addEventListener('submit', function (e) {
 /* IS IT YOU */ 
 function isItYou(yesOrNo){
   if(yesOrNo == 'yes'){
-    console.log('yes');
     document.getElementById("rsvp_its_you").classList.remove('d-block');
     document.getElementById("rsvp_its_you").classList.add('d-none');
     document.getElementById("rsvpForm").classList.remove('d-none');
@@ -579,7 +578,6 @@ function isItYou(yesOrNo){
         container.innerHTML += html;
     });
   } else {
-    console.log('no');
     document.getElementById("rsvp_its_you").classList.remove('d-block');
     document.getElementById("rsvp_its_you").classList.add('d-none');
     document.getElementById("rsvp_name").style.display = "block";
