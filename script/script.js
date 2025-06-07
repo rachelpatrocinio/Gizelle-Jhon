@@ -287,7 +287,6 @@ document.getElementById('rsvpForm').addEventListener('submit', function (e) {
   });
 });
 
-
     // "Database" famiglie
     const families = {
       "utente prova": ["utente prova 1", "utente prova 2"],
@@ -503,7 +502,6 @@ document.getElementById('rsvpForm').addEventListener('submit', function (e) {
       "forting manigbas": ["Forting Manigbas"],
       "belen manigbas": ["Belen Manigbas"]
     };
-
     function checkName() {
       const inputName = document.getElementById("nameInput").value.trim().toLowerCase();
       const members = families[inputName];
@@ -527,7 +525,6 @@ document.getElementById('rsvpForm').addEventListener('submit', function (e) {
         document.getElementById("error").style.color = "#9A352A";
       }
     }
-
 
 
 
