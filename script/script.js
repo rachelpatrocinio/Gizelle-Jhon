@@ -226,6 +226,8 @@ function goToPage(page) {
     document.getElementById("messageOfConfirm").classList.remove('d-block');
     document.getElementById("messageOfConfirm").classList.add('d-none');
     document.getElementById("messaggioConferma").style.display = "none";
+    document.getElementById("message_spinner").classList.add('d-block');
+
   }
 }
 
@@ -269,7 +271,14 @@ document.getElementById('rsvpForm').addEventListener('submit', function (e) {
       document.getElementById("error").textContent = "";
       document.getElementById("messageOfConfirm").classList.remove('d-none');
       document.getElementById("messageOfConfirm").classList.add('d-block');
-      document.getElementById("messaggioConferma").style.display = "block";
+      setTimeout(function(){
+        document.getElementById("message_spinner").classList.remove('d-block');
+        document.getElementById("message_spinner").classList.add('d-none');
+        document.getElementById("messaggioConferma").style.display = "block";
+        setTimeout(function(){
+          location.reload();
+        },100)
+      },2000)
     } else {
       alert("Errore nell'invio. Riprova.");
     }
