@@ -806,9 +806,47 @@ footer h6{
   letter-spacing: 1px;
 }
 
+#step1{
+  text-align: center;
+}
+
+#step1 label,
+.rsvp_name_input{
+  font-size: 11px;
+}
+
+.rsvp_ciao{
+  font-size: 14px;
+}
+
+#familyName{
+  font-size: 16px;
+}
+
 @media screen and (min-width: 789px){
   #rsvp section{
     width: 600px;
+  }
+
+  #rsvp .btn-confirm{
+    font-size: 16px !important;
+  }
+
+  #step1 label,
+  .rsvp_name_input{
+    font-size: 16px !important;
+  }
+
+  #rsvp #error{
+    font-size: 16px !important;
+  }
+
+  .rsvp_section p{
+    font-size: 16px !important;
+  }
+
+  #familyMembers{
+    font-size: 16px !important;
   }
 }
 
@@ -820,6 +858,10 @@ footer h6{
   font-size: 16px;
   letter-spacing: 1px;
   width: 90%;
+}
+
+.rsvp_section p{
+  font-size: 11px;
 }
 
 .rsvp_name_input{
@@ -837,6 +879,7 @@ footer h6{
   padding: 5px !important;
   color: white;
   background-color: #9A352A;
+  font-size: 11px;
 }
 
 #rsvp .btn-confirm.yes,
@@ -847,6 +890,7 @@ footer h6{
 #familyMembers{
   border: 1px solid #9A352A;
   padding: 10px !important;
+  font-size: 11px;
 }
 
 .textarea_rsvp{
@@ -861,3 +905,9 @@ footer h6{
   border-color: 2px solid #9A352A !important;
   outline-color: #9A352A;
 }
+
+#rsvp #error{
+  font-size: 11px;
+  white-space: pre-line;
+}
+

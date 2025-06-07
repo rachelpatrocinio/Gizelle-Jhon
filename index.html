@@ -545,17 +545,17 @@
             <div class="row justify-content-center">
                 <section class="rsvp_section lora p-3 p-md-5" id="rsvp_name">
                     <div id="step1">
-                        <label class="mb-1">Inserisci il tuo nome completo:</label><br>
-                        <input type="text" id="nameInput" class="rsvp_name_input"/>
-                        <div class="mt-2 d-flex justify-content-between">
+                        <label class="mb-2">Inserisci il tuo nome completo</label><br>
+                        <input type="text" id="nameInput" class="rsvp_name_input text-center"/>
+                        <div class="mt-3 d-flex flex-column justify-content-center align-items-center">
+                            <button class="btn-confirm mb-3" onclick="checkName()">Conferma</button>
                             <p id="error"></p>
-                            <button class="btn-confirm" onclick="checkName()">Conferma</button>
                         </div>
                     </div>
                 </section>
 
                 <section class="rsvp_section lora p-3 p-md-5 d-none" id="rsvp_its_you">
-                    <h3>Ciao <span id="familyName"></span>!</h3>
+                    <h3 class="rsvp_ciao">Ciao <span id="familyName"></span>!</h3>
                     <p class="mb-4">Fai parte di questo gruppo?</p>
                     <div id="familyMembers"></div>
                     <div class="d-flex justify-content-end mt-2 gap-2">
@@ -572,11 +572,11 @@
                     </form>
                 </section>
                 
-                <section class="rsvp_section d-none p-5 text-center" id="messageOfConfirm">
+                <section class="rsvp_section d-none p-5 text-center d-flex justify-content-center" id="messageOfConfirm">
                     <div id="message_spinner" class="spinner-border" role="status">
                         <span class="sr-only"></span>
                     </div>
-                    <div class="lora color-green" id="messaggioConferma" style="display:none;">RSVP inviato con successo!</div>
+                    <div class="lora color-green" id="messaggioConferma" style="display:none;">RSVP inviato con successo! <br> Attendi che si ricarichi la pagina<div>
                 </section>
             </div>
         </div>

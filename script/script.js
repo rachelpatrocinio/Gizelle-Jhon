@@ -275,9 +275,9 @@ document.getElementById('rsvpForm').addEventListener('submit', function (e) {
         document.getElementById("message_spinner").classList.remove('d-block');
         document.getElementById("message_spinner").classList.add('d-none');
         document.getElementById("messaggioConferma").style.display = "block";
-        setTimeout(function(){
-          location.reload();
-        },100)
+        //setTimeout(function(){
+        //  location.reload();
+        //},2000)
       },2000)
     } else {
       alert("Errore nell'invio. Riprova.");
@@ -523,7 +523,7 @@ document.getElementById('rsvpForm').addEventListener('submit', function (e) {
           familyMembers.innerHTML += html;
         });
       } else {
-        document.getElementById("error").textContent = "Non riusciamo a trovare il tuo nome, prova di nuovo.";
+        document.getElementById("error").textContent = "Non riusciamo a trovare il tuo nome.\nProva di nuovo!";
         document.getElementById("error").style.color = "#9A352A";
       }
     }
@@ -554,7 +554,7 @@ function isItYou(yesOrNo){
 
              <label class="mt-3 w-100">
               <div class="d-flex justify-content-between">
-                <p class="font-2">Cerimonia in Chiesa</p>  
+                <p class="font-2"><strong>Cerimonia in Chiesa</strong></p>  
                 <select class="select_response color-green" name="cerimonia[${member}]" required>
                   <option value="Sì">Sì</option>
                   <option value="No">No</option>
@@ -567,7 +567,7 @@ function isItYou(yesOrNo){
 
             <label class="mt-3">
               <div class="d-flex justify-content-between">
-                <p class="font-2">Ricevimento in Location</p>  
+                <p class="font-2"><strong>Ricevimento in Location</strong></p>  
                 <select class="select_response color-green" name="ricevimento[${member}]" required>
                   <option value="Sì">Sì</option>
                   <option value="No">No</option>
