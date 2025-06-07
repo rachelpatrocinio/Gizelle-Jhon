@@ -526,6 +526,7 @@ document.getElementById('rsvpForm').addEventListener('submit', function (e) {
 /* IS IT YOU */ 
 function isItYou(yesOrNo){
   if(yesOrNo == 'yes'){
+    console.log('yes');
     document.getElementById("rsvp_its_you").classList.remove('d-block');
     document.getElementById("rsvp_its_you").classList.add('d-none');
     document.getElementById("rsvpForm").classList.remove('d-none');
@@ -578,6 +579,7 @@ function isItYou(yesOrNo){
         container.innerHTML += html;
     });
   } else {
+    console.log('no');
     document.getElementById("rsvp_its_you").classList.remove('d-block');
     document.getElementById("rsvp_its_you").classList.add('d-none');
     document.getElementById("rsvp_name").style.display = "block";

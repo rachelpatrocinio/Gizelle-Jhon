@@ -853,7 +853,8 @@ footer h6{
   color: #50593C;
   outline-color: #50593C;
   width: 100%;
-  padding: 5px
+  padding: 10px !important;
+  margin-top: 10px;
 }
 
 .select_response{
