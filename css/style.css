@@ -23,9 +23,18 @@
   color: #50593C;
 }
 
+.bg-green{
+  background-color: #50593C;
+}
+
+.bg-pink-dark{
+  background-color: #9A352A !important;
+}
+
 .color-dark-pink{
   color: #9A352A;
 }
+
 
 .bg-light-pink{
   /*background-color: rgba(154, 53, 42, 0.1);*/
@@ -741,12 +750,16 @@ nav .col-2{
 }
 
 @media screen and (min-width: 789px){
-  .honeymoon_description{
-    font-size: 16px;
+  .honeymoon_description div{
+    font-size: 16px !important;
   }
 
   #honeymoon img:not(.downtitle){
     height: 300px;
+  }
+
+  #honeymoon h6.color-green{
+    font-size: 18px !important;
   }
 }
 
@@ -783,4 +796,67 @@ footer h6{
 /* RSVP */
 #rsvp .downtitle{
   width: 200px;
+}
+
+
+
+
+/* RSVP */
+#rsvp .row{
+  letter-spacing: 1px;
+}
+
+@media screen and (min-width: 789px){
+  #rsvp section{
+    width: 600px;
+  }
+}
+
+
+.rsvp_section{
+  background-color: rgba(154, 53, 42, 0.06);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  width: 400px;
+}
+
+.rsvp_name_input{
+  width: 100%;
+  border-radius: 10px;
+  border: unset;
+  outline-color: transparent !important;
+  padding: 10px !important;
+  color: #50593C;
+}
+
+#rsvp .btn-confirm{
+  border-radius: 10px;
+  border-color: transparent;
+  padding: 5px !important;
+  color: white;
+  background-color: #9A352A;
+}
+
+#rsvp .btn-confirm.yes,
+#rsvp .btn-confirm.no{
+  width: 100px;
+}
+
+#familyMembers{
+  border: 1px solid #9A352A;
+  padding: 10px !important;
+}
+
+.textarea_rsvp{
+  color: #50593C;
+  outline-color: #50593C;
+  width: 100%;
+  padding: 5px
+}
+
+.select_response{
+  border-color: 2px solid #9A352A !important;
+  outline-color: #9A352A;
 }

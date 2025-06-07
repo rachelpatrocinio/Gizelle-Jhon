@@ -170,7 +170,7 @@
             <div class="row gap-4 px-4 px-md-0">
                 <div class="col-12 col-md p-3 bg-light-pink position-relative">
                     <img class="fiore_5_left" src="./icons/fiore_5-removebg-preview.png">
-                    <h3 class="lora text-center color-dark-pink mb-3">TIMELINE</h3>
+                    <h3 class="lora text-center color-dark-pink mb-3">SCHEDULE</h3>
                     <div class="text-center">
                         <img src="./img/timeline-removebg-preview.png">
                     </div>
@@ -192,7 +192,7 @@
 
                 <div class="col-12 col-md p-3 bg-dark-pink position-relative">
                     <img class="fiore_5_down_right" src="./img/photo_5913331610906905603_x-removebg-preview.png">
-                    <h3 class="lora text-center color-dark-pink mb-3">GIFT</h3>
+                    <h3 class="lora text-center color-dark-pink mb-3">WEDDING GIFTS</h3>
                     <div class="text-center">
                         <img class="gift_img" src="./img/Gift-removebg-preview.png">
                     </div>
@@ -502,7 +502,7 @@
                     </div>
                 </div>
                 <div class="col-12 lora p-3 p-md-0 honeymoon_description">
-                    <div class="p-5">
+                    <div class="p-5 text-center">
                         Dal 6 al 21 novembre 2025 partiremo per un viaggio indimenticabile in <strong>Egitto</strong>.<br>
                         Trascorreremo i primi giorni al Cairo, visitando il Museo Egizio, le Piramidi di Giza e la Sfinge.
                         <br><br>
@@ -535,14 +535,70 @@
     </section> 
 </main>
 
-<main id="rsvp" class="d-none page mb-5">
+<main id="rsvp" class="d-none page mb-5 d-flex justify-content-center">
     <section class="d-flex justify-content-center mt-3 mt-md-5">
         <div class="container">
             <div class="text-center">
                 <h1 class="mt-3 alex-brush-regular text-center color-dark-pink">Rsvp</h1>
                 <img class="mb-5 downtitle" src="./img/downtitle.png">
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
+                <section class="rsvp_section lora p-3 p-md-5" id="rsvp_name">
+                    <div id="step1">
+                        <label class="mb-1">Inserisci il tuo nome completo:</label><br>
+                        <input type="text" id="nameInput" class="rsvp_name_input"/>
+                        <div class="mt-2 d-flex justify-content-between">
+                            <p id="error"></p>
+                            <button class="btn-confirm" onclick="checkName()">Conferma</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="rsvp_section lora p-3 p-md-5 d-none" id="rsvp_its_you">
+                    <h3>Ciao <span id="familyName"></span>!</h3>
+                    <p class="mb-4">Fai parte di questo gruppo?</p>
+                    <div id="familyMembers"></div>
+                    <div class="d-flex justify-content-end mt-2 gap-2">
+                        <button class="btn-confirm yes bg-green" onclick="isItYou('yes')">Si</button>
+                        <button class="btn-confirm no bg-pink-dark" onclick="isItYou('no')">No</button>
+                    </div>
+
+                </section>
+
+                 <section class="rsvp_section lora p-3 p-md-5 d-none d-flex justify-content-end" id="rsvpForm">
+                    <form action="https://formspree.io/f/mzzgdvdj" method="POST" id="dynamicForm">
+                        <div id="membersContainer"></div>
+                        <br>
+                        <button class="btn-confirm" type="submit">Invia RSVP</button>
+                    </form>
+                </section>
+                
+                <section class="rsvp_section d-none p-5 text-center" id="messageOfConfirm">
+                    <div class="lora color-green" id="messaggioConferma" style="display:none;">RSVP inviato con successo!</div>
+                </section>
+
+ 
+                <!--
+                <form id="rsvpForm" action="https://formspree.io/f/mzzgdvdj" method="POST">
+                    <label>Nome:</label>
+                    <input type="text" name="nome" required>
+                  
+                    <label>Parteciperai?</label>
+                    <select name="partecipazione" required>
+                      <option value="Sì">Sì</option>
+                      <option value="No">No</option>
+                    </select>
+                  
+                    <label>Accompagnatori:</label>
+                    <input type="number" name="accompagnatori" value="0" min="0">
+                  
+                    <label>Note:</label>
+                    <textarea name="note"></textarea>
+                  
+                    <button type="submit">Invia RSVP</button>
+                  </form>
+                  
+                -->
             </div>
         </div>
     </section> 
