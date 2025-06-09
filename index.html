@@ -535,7 +535,6 @@
     </section> 
 </main>
 
-<!--
 <main id="rsvp" class="d-none page mb-5 d-flex justify-content-center">
     <section class="d-flex justify-content-center mt-3 mt-md-5">
         <div class="container">
@@ -583,67 +582,6 @@
         </div>
     </section> 
 </main>
--->
-
-<main id="rsvp" class="d-none page mb-5 d-flex justify-content-center">
-    <section class="d-flex justify-content-center mt-3 mt-md-5">
-      <div class="container">
-        <div class="text-center">
-          <h1 class="mt-3 alex-brush-regular text-center color-dark-pink">Rsvp</h1>
-          <img class="mb-5 downtitle" src="./img/downtitle.png">
-        </div>
-  
-        <div class="row justify-content-center">
-          <!-- Step 1: Inserimento nome -->
-          <section class="rsvp_section lora p-3 p-md-5" id="rsvp_name">
-            <div id="step1">
-              <label class="mb-2 color-green">Inserisci il tuo nome completo</label><br>
-              <input type="text" name="name" id="nameInput" class="rsvp_name_input text-center" />
-              <div class="mt-3 d-flex flex-column justify-content-center align-items-center">
-                <button class="btn-confirm mb-3" onclick="checkName()">Conferma</button>
-                <p id="error"></p>
-              </div>
-            </div>
-          </section>
-  
-          <!-- Step 2: Conferma gruppo -->
-          <section class="rsvp_section lora p-3 p-md-5 d-none" id="rsvp_its_you">
-            <h3 class="rsvp_ciao">Ciao <span id="familyName"></span>!</h3>
-            <p class="mb-4">Fai parte di questo gruppo?</p>
-            <div id="familyMembers"></div>
-            <div class="d-flex justify-content-end mt-2 gap-2">
-              <button class="btn-confirm yes bg-green" onclick="isItYou('yes')">Sì</button>
-              <button class="btn-confirm no bg-pink-dark" onclick="isItYou('no')">No</button>
-            </div>
-          </section>
-  
-          <!-- Step 3: Form RSVP -->
-          <section class="rsvp_section lora p-3 p-md-5 d-none d-flex justify-content-end" id="rsvpForm">
-            <form action="https://formsubmit.co/jhonpierandgizellewedding@gmail.com" method="POST" id="dynamicForm">
-              <!-- 🔁 Sostituisci con la tua email sopra -->
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_template" value="table">
-              <div id="membersContainer"></div>
-              <br>
-              <button class="btn-confirm" type="submit">Invia RSVP</button>
-            </form>
-          </section>
-  
-          <!-- Conferma messaggio -->
-          <section class="rsvp_section d-none p-5 text-center d-flex justify-content-center" id="messageOfConfirm">
-            <div id="message_spinner" class="spinner-border" role="status">
-              <span class="sr-only"></span>
-            </div>
-            <div class="lora color-green" id="messaggioConferma" style="display:none;">
-              RSVP inviato con successo!<br>
-              La pagina dovrebbe aggiornarsi automaticamente. <br>
-              Se ciò non accade entro pochi secondi, ricaricala manualmente. Grazie.
-            </div>
-          </section>
-        </div>
-      </div>
-    </section>
-  </main>
     
 <footer class="p-4 mt-5">
     <section class="countdown py-2 lora mb-5 d-flex justify-content-center">

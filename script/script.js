@@ -248,7 +248,6 @@ function openHamburgeMenu(){
 
 
 // == RSVP == 
-/*
 document.getElementById('rsvpForm').addEventListener('submit', function (e) {
   e.preventDefault();
 
@@ -287,7 +286,7 @@ document.getElementById('rsvpForm').addEventListener('submit', function (e) {
     alert("Errore di rete: " + error.message);
   });
 });
-*/
+
 
     // "Database" famiglie
     const families = {
@@ -589,39 +588,3 @@ function isItYou(yesOrNo){
     document.getElementById("rsvp_name").style.display = "block";
   }
 }
-
-
-
-
-
-// === FUNZIONE: Gestione invio form RSVP ===
-document.getElementById('dynamicForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-  const form = e.target;
-
-  fetch(form.action, {
-    method: "POST",
-    body: new FormData(form),
-    headers: {
-      'Accept': 'application/json'
-    }
-  }).then(response => {
-    if (response.ok) {
-      form.style.display = "none";
-      document.getElementById("nameInput").value = "";
-      document.getElementById("rsvpForm").classList.add("d-none");
-      document.getElementById("messageOfConfirm").classList.remove("d-none");
-      document.getElementById("message_spinner").classList.add("d-block");
-
-      setTimeout(() => {
-        document.getElementById("message_spinner").classList.remove("d-block");
-        document.getElementById("messaggioConferma").style.display = "block";
-        // location.reload(); // puoi scommentare se vuoi il reload automatico
-      }, 2000);
-    } else {
-      alert("Errore nell'invio. Riprova.");
-    }
-  }).catch(error => {
-    alert("Errore di rete: " + error.message);
-  });
-});
