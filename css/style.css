@@ -227,14 +227,14 @@ body.menu-open {
     color: white;
     text-shadow: 7px 7px 9px rgba(0, 0, 0, 1);
     margin: 0;
-    font-size: 70px !important;
+    font-size: 40px !important;
   }
 
   .carousel-title .date_hero_banner{
     color: white;
     text-shadow: 7px 7px 9px rgba(0, 0, 0, 1);
     letter-spacing: 2px;
-    font-size: 20px !important;
+    font-size: 10px !important;
   }
   
   /* Immagini e animazione */
