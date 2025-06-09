@@ -248,6 +248,7 @@ function openHamburgeMenu(){
 
 
 // == RSVP == 
+/*
 document.getElementById('rsvpForm').addEventListener('submit', function (e) {
   e.preventDefault();
 
@@ -286,6 +287,7 @@ document.getElementById('rsvpForm').addEventListener('submit', function (e) {
     alert("Errore di rete: " + error.message);
   });
 });
+*/
 
 
     // "Database" famiglie
@@ -531,6 +533,7 @@ document.getElementById('rsvpForm').addEventListener('submit', function (e) {
 
 
 /* IS IT YOU */ 
+/*
 function isItYou(yesOrNo){
   if(yesOrNo == 'yes'){
     document.getElementById("rsvp_its_you").classList.remove('d-block');
@@ -588,3 +591,67 @@ function isItYou(yesOrNo){
     document.getElementById("rsvp_name").style.display = "block";
   }
 }
+*/
+
+/* IS IT YOU 2*/ 
+function isItYou(yesOrNo){
+  if(yesOrNo == 'yes'){
+    document.getElementById("rsvp_its_you").classList.remove('d-block');
+    document.getElementById("rsvp_its_you").classList.add('d-none');
+    document.getElementById("rsvpForm").classList.remove('d-none');
+    document.getElementById("rsvpForm").classList.add('d-block');
+
+    const container = document.getElementById("membersContainer");
+    container.innerHTML = "";
+    const inputName = document.getElementById("nameInput").value.trim().toLowerCase();
+    const members = families[inputName];
+    members.forEach(member => {
+        const html = `
+        <fieldset>
+          <legend class="color-dark-pink alex-brush-regular font-3">${member}</legend>
+
+          <!-- Nome membro visibile e come hidden -->
+          <input type="hidden" name="members[]" value="${member}">
+
+          <!-- Cerimonia -->
+          <label class="mt-3 w-100">
+            <div class="d-flex justify-content-between">
+              <p class="font-2"><strong>Cerimonia in Chiesa</strong></p>  
+              <select class="select_response color-green" name="cerimonia_${member}" required>
+                <option value="Sì">Sì</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <p class="font-14">📍 Chiesa di Sant'Anselmo all'Aventino</p>
+            <p>🕒 15:00 </p>
+          </label>
+
+          <!-- Ricevimento -->
+          <label class="mt-3">
+            <div class="d-flex justify-content-between">
+              <p class="font-2"><strong>Ricevimento in Location</strong></p>  
+              <select class="select_response color-green" name="ricevimento_${member}" required>
+                <option value="Sì">Sì</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <p class="font-14">📍 Magnolia Resort</p>
+            <p>🕔 17:30 </p>
+
+            <!-- Preferenze alimentari -->
+            <div class="mt-4">
+              <p class="font-14">Quali sono le tue preferenze alimentari (allergie, intolleranze, dieta specifica)?</p>
+              <textarea class="textarea_rsvp lora" name="preferenze_alimentari_${member}"></textarea>
+            </div>
+          </label>
+        </fieldset><br>
+        `;
+        container.innerHTML += html;
+    });
+  } else {
+    document.getElementById("rsvp_its_you").classList.remove('d-block');
+    document.getElementById("rsvp_its_you").classList.add('d-none');
+    document.getElementById("rsvp_name").style.display = "block";
+  }
+}
+
