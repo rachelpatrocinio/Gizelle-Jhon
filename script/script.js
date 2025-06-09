@@ -164,8 +164,9 @@ window.addEventListener('touchstart', playAudio);
   */
 
   const audio = document.getElementById('bg-music');
-  const toggleMusicButton = document.getElementById('toggleMusicButton');
-  let isMusicPlaying = true; // Variabile per tenere traccia dello stato della musica
+  const playIcon = document.getElementById('playIcon');
+  const pauseIcon = document.getElementById('pauseIcon');
+  let isMusicPlaying = false; // Variabile per tenere traccia dello stato della musica
 
   // Funzione per avviare la musica
   function playAudio() {
@@ -173,10 +174,19 @@ window.addEventListener('touchstart', playAudio);
       console.log("Autoplay bloccato, attendi interazione");
     });
 
-    // Rimuovi i listener per evitare di attivare la musica più volte
-    window.removeEventListener('click', playAudio);
-    window.removeEventListener('scroll', playAudio);
-    window.removeEventListener('touchstart', playAudio);
+    // Mostra l'icona pausa e nascondi quella play
+    playIcon.style.display = 'none';
+    pauseIcon.style.display = 'inline';
+    isMusicPlaying = true;
+  }
+
+  // Funzione per mettere in pausa la musica
+  function pauseAudio() {
+    audio.pause();
+    // Mostra l'icona play e nascondi quella pausa
+    pauseIcon.style.display = 'none';
+    playIcon.style.display = 'inline';
+    isMusicPlaying = false;
   }
 
   // Gestisci l'evento di visibilità della pagina
@@ -187,7 +197,6 @@ window.addEventListener('touchstart', playAudio);
       console.log("Musica messa in pausa, la tab non è visibile.");
     } else {
       // La pagina è visibile (l'utente è tornato alla tab)
-      // Se vuoi, puoi far riprendere la musica:
       if (isMusicPlaying) {
         audio.play().catch(() => {
           console.log("Autoplay bloccato, attendi interazione");
@@ -199,6 +208,10 @@ window.addEventListener('touchstart', playAudio);
   // Aggiungi i listener per l'evento di visibilità della pagina
   document.addEventListener('visibilitychange', handleVisibilityChange);
 
+  // Aggiungi i listener per il click sulle icone
+  playIcon.addEventListener('click', playAudio);
+  pauseIcon.addEventListener('click', pauseAudio);
+
   // Avvia la musica al primo clic, scroll, o touch
   audio.play().catch(() => {
     console.log("Autoplay bloccato, attendi interazione");
@@ -207,26 +220,6 @@ window.addEventListener('touchstart', playAudio);
   window.addEventListener('click', playAudio);
   window.addEventListener('scroll', playAudio);
   window.addEventListener('touchstart', playAudio);
-
-  // Funzione per bloccare o riprendere la musica tramite il bottone
-  function toggleMusic() {
-    if (isMusicPlaying) {
-      audio.pause();
-      toggleMusicButton.textContent = "Riprendi Musica"; // Cambia il testo del bottone
-      isMusicPlaying = false;
-      console.log("Musica messa in pausa.");
-    } else {
-      audio.play().catch(() => {
-        console.log("Autoplay bloccato, attendi interazione");
-      });
-      toggleMusicButton.textContent = "Blocca Musica"; // Cambia il testo del bottone
-      isMusicPlaying = true;
-      console.log("Musica ripresa.");
-    }
-  }
-
-  // Aggiungi un event listener per il click sul bottone
-  toggleMusicButton.addEventListener('click', toggleMusic);
 
 // -------------------------------------------------------------------
 
