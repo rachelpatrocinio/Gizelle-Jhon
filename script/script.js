@@ -150,7 +150,6 @@ function toggleMusic() {
   if (isMusicPlaying) {
     audio.pause();
     toggleMusicButton.innerHTML = `<i id="playIcon" class="fas fa-play" style="font-size: 2em; cursor: pointer;"></i>`;
-    ; // Cambia il testo del bottone
     isMusicPlaying = false;
     console.log("Musica messa in pausa.");
   } else {
