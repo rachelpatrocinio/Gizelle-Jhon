@@ -100,28 +100,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // === MUSIC AUTOPLAY (OUTSIDE DOMContentLoaded) ===
-/*
 const audio = document.getElementById('bg-music');
-
-function playAudio() {
-  audio.play().catch(() => {
-    console.log("Autoplay bloccato, attendi interazione");
-  });
-
-  window.removeEventListener('click', playAudio);
-  window.removeEventListener('scroll', playAudio);
-  window.removeEventListener('touchstart', playAudio);
-}
-
-audio.play().catch(() => {
-  console.log("Autoplay bloccato, attendi interazione");
-});
-
-window.addEventListener('click', playAudio);
-window.addEventListener('scroll', playAudio);
-window.addEventListener('touchstart', playAudio);
-*/
-const audio = document.getElementById('bg-music');
+const toggleMusicButton = document.getElementById('toggleMusicButton');
+let isMusicPlaying = true; // Variabile per tenere traccia dello stato della musica
 
 // Funzione per avviare la musica
 function playAudio() {
@@ -144,9 +125,11 @@ function handleVisibilityChange() {
   } else {
     // La pagina è visibile (l'utente è tornato alla tab)
     // Se vuoi, puoi far riprendere la musica:
-    audio.play().catch(() => {
-      console.log("Autoplay bloccato, attendi interazione");
-    });
+    if (isMusicPlaying) {
+      audio.play().catch(() => {
+        console.log("Autoplay bloccato, attendi interazione");
+      });
+    }
   }
 }
 
@@ -161,6 +144,27 @@ audio.play().catch(() => {
 window.addEventListener('click', playAudio);
 window.addEventListener('scroll', playAudio);
 window.addEventListener('touchstart', playAudio);
+
+// Funzione per bloccare o riprendere la musica tramite il bottone
+function toggleMusic() {
+  if (isMusicPlaying) {
+    audio.pause();
+    toggleMusicButton.innerHTML = `<i id="playIcon" class="fas fa-play" style="font-size: 2em; cursor: pointer;"></i>`;
+    ; // Cambia il testo del bottone
+    isMusicPlaying = false;
+    console.log("Musica messa in pausa.");
+  } else {
+    audio.play().catch(() => {
+      console.log("Autoplay bloccato, attendi interazione");
+    });
+    toggleMusicButton.innerHTML = `<i id="pauseIcon" class="fas fa-pause" style="font-size: 2em; cursor: pointer;"></i>`; // Cambia il testo del bottone
+    isMusicPlaying = true;
+    console.log("Musica ripresa.");
+  }
+}
+
+// Aggiungi un event listener per il click sul bottone
+toggleMusicButton.addEventListener('click', toggleMusic);
 
 //-------------------------------------------------
 

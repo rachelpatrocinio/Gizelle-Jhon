@@ -639,11 +639,6 @@
     <section class="countdown py-2 lora mb-5 d-flex justify-content-center">
         <div class="container">
             <div class="row">
-                <!-- Icone per Play e Pausa -->
-                <div id="musicControl">
-                    <i id="playIcon" class="fas fa-play" style="font-size: 2em; cursor: pointer;"></i>
-                    <i id="pauseIcon" class="fas fa-pause" style="font-size: 2em; cursor: pointer; display: none;"></i>
-                </div>
                 <div id="countdown" class="py-2 col-12">
                     <img class="fiore_1" src="./icons/fiore_1-removebg-preview.png">
                     <!--<img class="fiore_2" src="./icons/fiore_2-removebg-preview.png">-->
@@ -676,7 +671,9 @@
         </div>
     </section>
     <h6 class="lora color-dark-pink text-center">Website developed by Rachel A. Patrocinio</h6>
-    <button id="toggleMusicButton">Blocca Musica</button>
+    <button id="toggleMusicButton">
+        <i id="pauseIcon" class="fas fa-pause" style="font-size: 2em; cursor: pointer;"></i>
+    </button>
 </footer>
 
 
