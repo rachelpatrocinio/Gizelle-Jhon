@@ -149,14 +149,14 @@ window.addEventListener('touchstart', playAudio);
 function toggleMusic() {
   if (isMusicPlaying) {
     audio.pause();
-    toggleMusicButton.innerHTML = `<i id="playIcon" class="fas fa-play" style="font-size: 2em; cursor: pointer;"></i>`;
+    toggleMusicButton.innerHTML = `<i id="playIcon" class="fas fa-play"></i>`;
     isMusicPlaying = false;
     console.log("Musica messa in pausa.");
   } else {
     audio.play().catch(() => {
       console.log("Autoplay bloccato, attendi interazione");
     });
-    toggleMusicButton.innerHTML = `<i id="pauseIcon" class="fas fa-pause" style="font-size: 2em; cursor: pointer;"></i>`; // Cambia il testo del bottone
+    toggleMusicButton.innerHTML = `<i id="pauseIcon" class="fas fa-pause"></i>`; // Cambia il testo del bottone
     isMusicPlaying = true;
     console.log("Musica ripresa.");
   }

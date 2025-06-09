@@ -391,6 +391,7 @@ nav .col-2{
   position: absolute;
   left: 0;
   top: 0;
+  color: #50593C !important;
 }
 
 .nav-mobile{
@@ -934,7 +935,10 @@ iframe{
   position: absolute;
   right: 0;
   top: 0;
-  width: 20px !important;
-  height: 20px !important;
-  margin: 15px !important;
+  width: 5px !important;
+  height: 5px !important;
+  margin-right: 25px !important;
+  margin-top: 10px !important;
+  color: #50593C;
+  cursor: pointer;
 }
