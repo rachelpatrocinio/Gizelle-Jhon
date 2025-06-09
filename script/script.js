@@ -578,8 +578,6 @@ document.getElementById('rsvpForm').addEventListener('submit', function (e) {
     }
 
 
-
-
 /* IS IT YOU FORMSPREE */ 
 /*
 function isItYou(yesOrNo){
