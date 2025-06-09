@@ -214,11 +214,11 @@ body.menu-open {
 
   @media screen and (min-width: 1089px){
     .carousel-title .title_hero_banner{
-        font-size: 80px;
+        font-size: 80px !important;
     }
 
     .carousel-title .date_hero_banner{
-      font-size: 30px;
+      font-size: 30px !important;
     }
   }
 
