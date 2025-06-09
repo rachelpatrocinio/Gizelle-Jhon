@@ -923,3 +923,7 @@ footer h6{
   white-space: pre-line;
 }
 
+iframe{
+  width: 100%;
+  height: 100%;
+}
