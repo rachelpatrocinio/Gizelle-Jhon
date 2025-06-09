@@ -617,7 +617,7 @@ function isItYou(yesOrNo){
           <label class="mt-3 w-100">
             <div class="d-flex justify-content-between">
               <p class="font-2"><strong>Cerimonia in Chiesa</strong></p>  
-              <select class="select_response color-green" name="cerimonia_${member}" required>
+              <select class="select_response color-green" name="CERIMONIA:_${member}" required>
                 <option value="Sì">Sì</option>
                 <option value="No">No</option>
               </select>
@@ -630,7 +630,7 @@ function isItYou(yesOrNo){
           <label class="mt-3">
             <div class="d-flex justify-content-between">
               <p class="font-2"><strong>Ricevimento in Location</strong></p>  
-              <select class="select_response color-green" name="ricevimento_${member}" required>
+              <select class="select_response color-green" name="RICEVIMENTO:_${member}" required>
                 <option value="Sì">Sì</option>
                 <option value="No">No</option>
               </select>
@@ -641,7 +641,7 @@ function isItYou(yesOrNo){
             <!-- Preferenze alimentari -->
             <div class="mt-4">
               <p class="font-14">Quali sono le tue preferenze alimentari (allergie, intolleranze, dieta specifica)?</p>
-              <textarea class="textarea_rsvp lora" name="preferenze_alimentari_${member}"></textarea>
+              <textarea class="textarea_rsvp lora" name="PREFERENZE_ALIMENTARI:_${member}"></textarea>
             </div>
           </label>
         </fieldset><br>
