@@ -931,4 +931,7 @@ iframe{
 
 #toggleMusicButton{
   border: none !important;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
