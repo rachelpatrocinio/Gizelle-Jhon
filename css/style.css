@@ -179,7 +179,7 @@ body.menu-open {
     height: 140px;
 }
 
-@media screen and (min-width: 789px){
+@media screen and (min-width: 1089px){
     .logo-header{
         width: 170px;
         height: 190px;
@@ -212,7 +212,7 @@ body.menu-open {
     pointer-events: none;
   }
 
-  @media screen and (min-width: 789px){
+  @media screen and (min-width: 1089px){
     .carousel-title .title_hero_banner{
         font-size: 80px;
     }
@@ -354,7 +354,7 @@ body.menu-open {
     min-width: 60px;
   }
 
-  @media screen and (min-width: 789px){
+  @media screen and (min-width: 1089px){
     .time-box {
         min-width: 100px;
         font-size: 35px;
@@ -442,7 +442,7 @@ nav .col-2{
 }
 
 
-@media screen and (min-width: 789px){
+@media screen and (min-width: 1089px){
     nav .col-2{
         font-size: 30px;
     }
@@ -473,7 +473,7 @@ nav .col-2{
   color: #50593C;
 }
 
-@media screen and (min-width: 789px) {
+@media screen and (min-width: 1089px) {
   .section-title{
     font-size: 40px;
   }
@@ -515,7 +515,7 @@ nav .col-2{
   cursor: pointer;
 }
 
-@media screen and (min-width: 789px){
+@media screen and (min-width: 1089px){
   #home .flower-container-left,
   #home .flower-container-right {
     width: 300px;
@@ -680,7 +680,7 @@ nav .col-2{
   font-size: 35px;
 }
 
-@media screen and (min-width: 789px){
+@media screen and (min-width: 1089px){
   #our_story .la_nostra_stroria_string,
   #our_story .amore_string,
   #our_story .insieme_a_voi_string{
@@ -749,7 +749,7 @@ nav .col-2{
   object-fit: cover;
 }
 
-@media screen and (min-width: 789px){
+@media screen and (min-width: 1089px){
   .honeymoon_description div{
     font-size: 16px !important;
   }
@@ -832,7 +832,7 @@ footer h6{
   font-size: 11px;
 }
 
-@media screen and (min-width: 789px){
+@media screen and (min-width: 1089px){
   #rsvp section{
     width: 600px !important;
   }
