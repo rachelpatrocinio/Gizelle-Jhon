@@ -275,9 +275,9 @@ document.getElementById('rsvpForm').addEventListener('submit', function (e) {
         document.getElementById("message_spinner").classList.remove('d-block');
         document.getElementById("message_spinner").classList.add('d-none');
         document.getElementById("messaggioConferma").style.display = "block";
-        //setTimeout(function(){
-        //  location.reload();
-        //},2000)
+        setTimeout(function(){
+          location.reload();
+        },2000)
       },2000)
     } else {
       alert("Errore nell'invio. Riprova.");
