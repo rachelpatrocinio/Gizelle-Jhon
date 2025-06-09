@@ -100,6 +100,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // === MUSIC AUTOPLAY (OUTSIDE DOMContentLoaded) ===
+/*
+const audio = document.getElementById('bg-music');
+
+function playAudio() {
+  audio.play().catch(() => {
+    console.log("Autoplay bloccato, attendi interazione");
+  });
+
+  window.removeEventListener('click', playAudio);
+  window.removeEventListener('scroll', playAudio);
+  window.removeEventListener('touchstart', playAudio);
+}
+
+audio.play().catch(() => {
+  console.log("Autoplay bloccato, attendi interazione");
+});
+
+window.addEventListener('click', playAudio);
+window.addEventListener('scroll', playAudio);
+window.addEventListener('touchstart', playAudio);
+*/
 const audio = document.getElementById('bg-music');
 
 // Funzione per avviare la musica
@@ -141,27 +162,7 @@ window.addEventListener('click', playAudio);
 window.addEventListener('scroll', playAudio);
 window.addEventListener('touchstart', playAudio);
 
-   // Funzione per bloccare o riprendere la musica tramite il bottone
-   function toggleMusic() {
-    if (isMusicPlaying) {
-      audio.pause();
-      toggleMusicButton.textContent = "Riprendi Musica"; // Cambia il testo del bottone
-      isMusicPlaying = false;
-      console.log("Musica messa in pausa.");
-    } else {
-      audio.play().catch(() => {
-        console.log("Autoplay bloccato, attendi interazione");
-      });
-      toggleMusicButton.textContent = "Blocca Musica"; // Cambia il testo del bottone
-      isMusicPlaying = true;
-      console.log("Musica ripresa.");
-    }
-  }
-
-  // Aggiungi un event listener per il click sul bottone
-  toggleMusicButton.addEventListener('click', toggleMusic);
-
-// -------------------------------------------------------------------
+//-------------------------------------------------
 
 
 
