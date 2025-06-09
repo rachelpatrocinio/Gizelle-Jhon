@@ -247,7 +247,7 @@ function openHamburgeMenu(){
 
 
 
-// == RSVP == 
+// == RSVP FORMSPREE == 
 /*
 document.getElementById('rsvpForm').addEventListener('submit', function (e) {
   e.preventDefault();
@@ -532,7 +532,7 @@ document.getElementById('rsvpForm').addEventListener('submit', function (e) {
 
 
 
-/* IS IT YOU */ 
+/* IS IT YOU FORMSPREE */ 
 /*
 function isItYou(yesOrNo){
   if(yesOrNo == 'yes'){
@@ -593,7 +593,7 @@ function isItYou(yesOrNo){
 }
 */
 
-/* IS IT YOU 2*/ 
+/* IS IT YOU FORMSUBMIT*/ 
 function isItYou(yesOrNo){
   if(yesOrNo == 'yes'){
     document.getElementById("rsvp_its_you").classList.remove('d-block');
