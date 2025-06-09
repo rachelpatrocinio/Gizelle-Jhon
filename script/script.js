@@ -100,6 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // === MUSIC AUTOPLAY (OUTSIDE DOMContentLoaded) ===
+/*
 const audio = document.getElementById('bg-music');
 
 function playAudio() {
@@ -119,6 +120,48 @@ audio.play().catch(() => {
 window.addEventListener('click', playAudio);
 window.addEventListener('scroll', playAudio);
 window.addEventListener('touchstart', playAudio);
+*/
+const audio = document.getElementById('bg-music');
+
+// Funzione per avviare la musica
+function playAudio() {
+  audio.play().catch(() => {
+    console.log("Autoplay bloccato, attendi interazione");
+  });
+
+  // Rimuovi i listener per evitare di attivare la musica più volte
+  window.removeEventListener('click', playAudio);
+  window.removeEventListener('scroll', playAudio);
+  window.removeEventListener('touchstart', playAudio);
+}
+
+// Gestisci l'evento di visibilità della pagina
+function handleVisibilityChange() {
+  if (document.hidden) {
+    // La pagina non è visibile (l'utente ha cambiato tab o minimizzato la finestra)
+    audio.pause();
+    console.log("Musica messa in pausa, la tab non è visibile.");
+  } else {
+    // La pagina è visibile (l'utente è tornato alla tab)
+    // Se vuoi, puoi far riprendere la musica:
+    audio.play().catch(() => {
+      console.log("Autoplay bloccato, attendi interazione");
+    });
+  }
+}
+
+// Aggiungi i listener per l'evento di visibilità della pagina
+document.addEventListener('visibilitychange', handleVisibilityChange);
+
+// Avvia la musica al primo clic, scroll, o touch
+audio.play().catch(() => {
+  console.log("Autoplay bloccato, attendi interazione");
+});
+
+window.addEventListener('click', playAudio);
+window.addEventListener('scroll', playAudio);
+window.addEventListener('touchstart', playAudio);
+
 
 
 // === COUNTDOWN ===
