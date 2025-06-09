@@ -248,6 +248,7 @@ function openHamburgeMenu(){
 
 
 // == RSVP == 
+/*
 document.getElementById('rsvpForm').addEventListener('submit', function (e) {
   e.preventDefault();
 
@@ -286,6 +287,7 @@ document.getElementById('rsvpForm').addEventListener('submit', function (e) {
     alert("Errore di rete: " + error.message);
   });
 });
+*/
 
     // "Database" famiglie
     const families = {
@@ -546,8 +548,6 @@ function isItYou(yesOrNo){
           <fieldset>
             <legend class="color-dark-pink alex-brush-regular font-3">${member}</legend>
             <input type="hidden" name="members[]" value="${member}">
-
-  
 
              <label class="mt-3 w-100">
               <div class="d-flex justify-content-between">
