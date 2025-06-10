@@ -869,7 +869,7 @@ footer h5{
 }
 
 @media screen and(min-width: 1089px){
-  footer h5.developer{
+  .developer{
     font-size: 16px !important;
   }
 }
