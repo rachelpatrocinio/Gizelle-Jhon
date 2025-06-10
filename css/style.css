@@ -775,15 +775,15 @@ nav .col-2{
 
 @media screen and(min-width: 1089px){
   #q_e_a .font-2{
-    font-size: 30px;
+    font-size: 30px !important;
   }
 
   #q_e_a .font-3{
-    font-size: 40px;
+    font-size: 40px !important;
   }
 
   #q_e_a .font-14{
-    font-size: 17px;
+    font-size: 17px !important;
   }
 }
 
