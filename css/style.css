@@ -445,7 +445,7 @@ nav .col-2{
   position: absolute;
   width: 300px;
   right: -102px;
-  bottom: -70px;
+  bottom: -90px;
 }
 
 
@@ -530,6 +530,10 @@ nav .col-2{
   #home .flower-container-left,
   #home .flower-container-right {
     width: 300px;
+  }
+
+  #home .flower-container-right {
+    bottom: -125px;
   }
 
   #home .announcement{
