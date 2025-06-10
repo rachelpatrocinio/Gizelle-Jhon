@@ -162,7 +162,7 @@ body.menu-open {
   position: absolute;
   width: 150px;
   right: -50px;
-  bottom: -70px;
+  bottom: -90px;
   overflow: hidden;
 }
 
@@ -357,7 +357,7 @@ body.menu-open {
   .time-box {
     display: inline-block;
     margin: 0 10px;
-    min-width: 60px;
+    min-width: 50px;
   }
 
   @media screen and (min-width: 1089px){
@@ -522,7 +522,11 @@ nav .col-2{
   cursor: pointer;
 }
 
-@media screen and (min-width: 1089px){
+.home_details .fiore_5{
+  display: none;
+}
+
+@media screen and (min-width: 1189px){
   #home .flower-container-left,
   #home .flower-container-right {
     width: 300px;
@@ -562,14 +566,15 @@ nav .col-2{
 
   .chiesa_img img{
     position: relative;
-    right: 45px;
     max-height: 350px;
+    border: 10px solid #DEACA2;
   }
 
   .reception_img img{
     position: relative;
     left: 100px;
     max-height: 400px;
+    border: 10px solid #DEACA2;
   }
 }
 
