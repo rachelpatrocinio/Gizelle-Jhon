@@ -1000,3 +1000,38 @@ iframe{
 .contacts a{
   text-decoration: underline;
 }
+
+
+
+
+
+
+@keyframes slide-in-right{
+  0%{
+      opacity:0;
+      transform: translateX(50px);
+  }
+  100%{
+      opacity: 1;
+      transform: translateX(0px);
+  }
+}
+
+
+@keyframes slide-in-left{
+  0%{
+      opacity:0;
+      transform: translateX(-50px);
+  }
+  100%{
+      opacity: 1;
+      transform: translateX(0px);
+  }
+}
+
+._slide-in-left{
+  animation: slide-in-left 0.9s ease-in;
+}
+._slide-in-right{
+  animation:slide-in-right 0.9s ease-in;
+}
