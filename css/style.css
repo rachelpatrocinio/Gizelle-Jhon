@@ -10,10 +10,10 @@
 }
 
 ._slide-in-left{
-  animation: slide-in-left 0.9s ease-in;
+  animation: slide-in-left 2s ease-in;
 }
 ._slide-in-right{
-  animation:slide-in-right 0.9s ease-in;
+  animation:slide-in-right 2s ease-in;
 }
 
 
