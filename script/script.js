@@ -553,6 +553,7 @@ document.getElementById('rsvpForm').addEventListener('submit', function (e) {
       "forting manigbas": ["Forting Manigbas"],
       "belen manigbas": ["Belen Manigbas"]
     };
+    /* ORIGINIAL
     function checkName() {
       const inputName = document.getElementById("nameInput").value.trim().toLowerCase();
       const members = families[inputName];
@@ -576,6 +577,154 @@ document.getElementById('rsvpForm').addEventListener('submit', function (e) {
         document.getElementById("error").style.color = "#9A352A";
       }
     }
+    */
+    /* VERSIONE 2
+    function levenshtein(a, b) {
+      const matrix = Array.from({ length: a.length + 1 }, (_, i) =>
+        Array.from({ length: b.length + 1 }, (_, j) =>
+          i === 0 ? j : j === 0 ? i : 0
+        )
+      );
+  
+      for (let i = 1; i <= a.length; i++) {
+        for (let j = 1; j <= b.length; j++) {
+          matrix[i][j] = a[i - 1] === b[j - 1]
+            ? matrix[i - 1][j - 1]
+            : Math.min(
+                matrix[i - 1][j] + 1,
+                matrix[i][j - 1] + 1,
+                matrix[i - 1][j - 1] + 1
+              );
+        }
+      }
+  
+      return matrix[a.length][b.length];
+    }
+  
+    function findClosestName(input, names) {
+      const threshold = 3; // massimo numero di errori ammessi
+      let closest = null;
+      let minDistance = Infinity;
+  
+      for (const name of names) {
+        const distance = levenshtein(input, name);
+        if (distance < minDistance && distance <= threshold) {
+          minDistance = distance;
+          closest = name;
+        }
+      }
+  
+      return closest;
+    }
+  
+    function checkName() {
+      const inputName = document.getElementById("nameInput").value.trim().toLowerCase();
+      const keys = Object.keys(families);
+  
+      const matchedName = families[inputName]
+        ? inputName
+        : findClosestName(inputName, keys);
+  
+      if (matchedName) {
+        const members = families[matchedName];
+  
+        document.getElementById("rsvp_name").style.display = "none";
+        document.getElementById("rsvp_its_you").classList.remove('d-none');
+        document.getElementById("rsvp_its_you").classList.add('d-block');
+        document.getElementById("familyName").textContent = matchedName.toUpperCase();
+  
+        const familyMembers = document.getElementById("familyMembers");
+        familyMembers.innerHTML = "";
+        members.forEach(member => {
+          familyMembers.innerHTML += `<p>${member}</p>`;
+        });
+  
+        document.getElementById("error").textContent = "";
+      } else {
+        document.getElementById("error").textContent = "Non riusciamo a trovare il tuo nome.\nProva di nuovo!";
+        document.getElementById("error").style.color = "#9A352A";
+      }
+    }
+      */
+
+    /*VERSIONE 3*/ 
+
+  function normalizeName(name) {
+    return name.trim().toLowerCase().replace(/[^a-zA-Z\s]/g, "").replace(/\s+/g, " ");
+  }
+
+  function levenshtein(a, b) {
+    const matrix = Array.from({ length: a.length + 1 }, (_, i) =>
+      Array.from({ length: b.length + 1 }, (_, j) =>
+        i === 0 ? j : j === 0 ? i : 0
+      )
+    );
+
+    for (let i = 1; i <= a.length; i++) {
+      for (let j = 1; j <= b.length; j++) {
+        matrix[i][j] = a[i - 1] === b[j - 1]
+          ? matrix[i - 1][j - 1]
+          : Math.min(
+              matrix[i - 1][j] + 1,
+              matrix[i][j - 1] + 1,
+              matrix[i - 1][j - 1] + 1
+            );
+      }
+    }
+
+    return matrix[a.length][b.length];
+  }
+
+  function findClosestName(input, names) {
+    const threshold = 5; // più alto = più tollerante
+    let closest = null;
+    let minDistance = Infinity;
+
+    for (const name of names) {
+      const distance = levenshtein(input, name);
+      if (distance < minDistance && distance <= threshold) {
+        minDistance = distance;
+        closest = name;
+      }
+    }
+
+    return closest;
+  }
+
+  function checkName() {
+    const inputRaw = document.getElementById("nameInput").value;
+    const inputName = normalizeName(inputRaw);
+    const normalizedKeys = Object.keys(families).map(normalizeName);
+
+    const matchedName = families[inputName]
+      ? inputName
+      : findClosestName(inputName, normalizedKeys);
+
+    const originalKey = Object.keys(families).find(
+      key => normalizeName(key) === matchedName
+    );
+
+    if (originalKey) {
+      const members = families[originalKey];
+
+      document.getElementById("rsvp_name").style.display = "none";
+      document.getElementById("rsvp_its_you").classList.remove('d-none');
+      document.getElementById("rsvp_its_you").classList.add('d-block');
+      document.getElementById("familyName").textContent = originalKey.toUpperCase();
+
+      const familyMembers = document.getElementById("familyMembers");
+      familyMembers.innerHTML = "";
+      members.forEach(member => {
+        familyMembers.innerHTML += `<p>${member}</p>`;
+      });
+
+      document.getElementById("error").textContent = "";
+    } else {
+      document.getElementById("error").textContent = "Non riusciamo a trovare il tuo nome.\nProva di nuovo!";
+      document.getElementById("error").style.color = "#9A352A";
+    }
+  }
+
 
 
 /* IS IT YOU FORMSPREE */ 
@@ -695,6 +844,7 @@ function isItYou(yesOrNo){
         container.innerHTML += html;
     });
   } else {
+    document.getElementById("nameInput").value = "";
     document.getElementById("rsvp_its_you").classList.remove('d-block');
     document.getElementById("rsvp_its_you").classList.add('d-none');
     document.getElementById("rsvp_name").style.display = "block";
