@@ -218,11 +218,11 @@ body.menu-open {
 
   @media screen and (min-width: 1089px){
     .carousel-title .title_hero_banner{
-        font-size: 80px !important;
+        font-size: 100px !important;
     }
 
     .carousel-title .date_hero_banner{
-      font-size: 30px !important;
+      font-size: 40px !important;
     }
   }
 
@@ -231,14 +231,14 @@ body.menu-open {
     color: white;
     text-shadow: 7px 7px 9px rgba(0, 0, 0, 1);
     margin: 0;
-    font-size: 40px !important;
+    font-size: 40px;
   }
 
   .carousel-title .date_hero_banner{
     color: white;
     text-shadow: 7px 7px 9px rgba(0, 0, 0, 1);
     letter-spacing: 2px;
-    font-size: 15px !important;
+    font-size: 15px;
   }
   
   /* Immagini e animazione */
@@ -539,12 +539,36 @@ nav .col-2{
 
   #home .announcement .font-1,
   #home .reception .font-1{
-    font-size: 30px;
+    font-size: 20px;
+  }
+
+
+  #home .announcement .font-2,
+  #home .reception .font-2{
+    font-size: 40px;
   }
 
   #home .announcement .font-3,
   #home .reception .font-3{
     font-size: 70px;
+  }
+
+  .home_details .container{
+    width: 80% !important;
+    display: flex;
+    justify-content: center;
+  }
+
+  .chiesa_img{
+    position: relative;
+    right: 50px;
+    max-height: 350px;
+  }
+
+  .reception_img{
+    position: relative;
+    left: 100px;
+    max-height: 400px;
   }
 }
 
