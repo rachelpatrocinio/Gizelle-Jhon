@@ -559,13 +559,13 @@ nav .col-2{
     justify-content: center;
   }
 
-  .chiesa_img{
+  .chiesa_img img{
     position: relative;
     right: 50px;
     max-height: 350px;
   }
 
-  .reception_img{
+  .reception_img img{
     position: relative;
     left: 100px;
     max-height: 400px;
