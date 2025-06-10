@@ -868,6 +868,12 @@ footer h5{
   color: #DEACA2;
 }
 
+@media screen and(min-width: 1089px){
+  footer h5{
+    font-size: 16px !important;
+  }
+}
+
 /* RSVP */
 #rsvp .downtitle{
   width: 200px;
