@@ -996,3 +996,7 @@ iframe{
   color: #50593C;
   cursor: pointer;
 }
+
+.contacts a{
+  text-decoration: underline;
+}
