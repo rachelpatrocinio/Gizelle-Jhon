@@ -773,6 +773,20 @@ nav .col-2{
   width: 200px;
 }
 
+@media screen and(min-width: 1089px){
+  #q_e_a .font-2{
+    font-size: 30px;
+  }
+
+  #q_e_a .font-3{
+    font-size: 40px;
+  }
+
+  #q_e_a .font-14{
+    font-size: 17px;
+  }
+}
+
 
 /* HONEYMOON */
 
