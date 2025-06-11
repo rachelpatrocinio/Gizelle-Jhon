@@ -690,7 +690,7 @@ document.getElementById('rsvpForm').addEventListener('submit', function (e) {
 
     return closest;
   }
-
+  /* OGGI
   function checkName() {
     const inputRaw = document.getElementById("nameInput").value;
     const inputName = normalizeName(inputRaw);
@@ -724,6 +724,46 @@ document.getElementById('rsvpForm').addEventListener('submit', function (e) {
       document.getElementById("error").style.color = "#9A352A";
     }
   }
+    */
+
+  let matchedFamilyKey = null; // <--- aggiungi questa variabile globale in alto
+
+function checkName() {
+  const inputRaw = document.getElementById("nameInput").value;
+  const inputName = normalizeName(inputRaw);
+  const normalizedKeys = Object.keys(families).map(normalizeName);
+
+  const matchedName = families[inputName]
+    ? inputName
+    : findClosestName(inputName, normalizedKeys);
+
+  const originalKey = Object.keys(families).find(
+    key => normalizeName(key) === matchedName
+  );
+
+  matchedFamilyKey = originalKey; // <--- salva qui il riferimento corretto
+
+  if (originalKey) {
+    const members = families[originalKey];
+
+    document.getElementById("rsvp_name").style.display = "none";
+    document.getElementById("rsvp_its_you").classList.remove('d-none');
+    document.getElementById("rsvp_its_you").classList.add('d-block');
+    document.getElementById("familyName").textContent = originalKey.toUpperCase();
+
+    const familyMembers = document.getElementById("familyMembers");
+    familyMembers.innerHTML = "";
+    members.forEach(member => {
+      familyMembers.innerHTML += `<p>${member}</p>`;
+    });
+
+    document.getElementById("error").textContent = "";
+  } else {
+    document.getElementById("error").textContent = "Non riusciamo a trovare il tuo nome.\nProva di nuovo!";
+    document.getElementById("error").style.color = "#9A352A";
+  }
+}
+
 
 
 
@@ -789,6 +829,7 @@ function isItYou(yesOrNo){
 */
 
 /* IS IT YOU FORMSUBMIT*/ 
+/*  OGGI
 function isItYou(yesOrNo){
   if(yesOrNo == 'yes'){
     document.getElementById("rsvp_its_you").classList.remove('d-block');
@@ -850,4 +891,68 @@ function isItYou(yesOrNo){
     document.getElementById("rsvp_name").style.display = "block";
   }
 }
+  */
+
+function isItYou(yesOrNo){
+  if(yesOrNo === 'yes'){
+    document.getElementById("rsvp_its_you").classList.remove('d-block');
+    document.getElementById("rsvp_its_you").classList.add('d-none');
+    document.getElementById("rsvpForm").classList.remove('d-none');
+    document.getElementById("rsvpForm").classList.add('d-block');
+
+    const container = document.getElementById("membersContainer");
+    container.innerHTML = "";
+
+    if (!matchedFamilyKey || !families[matchedFamilyKey]) {
+      container.innerHTML = "<p>Errore: famiglia non trovata.</p>";
+      return;
+    }
+
+    const members = families[matchedFamilyKey];
+    members.forEach(member => {
+      const html = `
+        <fieldset>
+          <legend class="color-dark-pink alex-brush-regular font-3">${member}</legend>
+          <input type="hidden" name="members[]" value="${member}">
+
+          <label class="mt-3 w-100">
+            <div class="d-flex justify-content-between">
+              <p class="font-2"><strong>Cerimonia in Chiesa</strong></p>  
+              <select class="select_response color-green" name="CERIMONIA:_${member}" required>
+                <option value="Sì">Sì</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <p class="font-14">📍 Chiesa di Sant'Anselmo all'Aventino</p>
+            <p>🕒 15:00 </p>
+          </label>
+
+          <label class="mt-3">
+            <div class="d-flex justify-content-between">
+              <p class="font-2"><strong>Ricevimento in Location</strong></p>  
+              <select class="select_response color-green" name="RICEVIMENTO:_${member}" required>
+                <option value="Sì">Sì</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <p class="font-14">📍 Magnolia Resort</p>
+            <p>🕔 17:30 </p>
+
+            <div class="mt-4">
+              <p class="font-14">Quali sono le tue preferenze alimentari (allergie, intolleranze, dieta specifica)?</p>
+              <textarea class="textarea_rsvp lora" name="PREFERENZE_ALIMENTARI:_${member}"></textarea>
+            </div>
+          </label>
+        </fieldset><br>
+      `;
+      container.innerHTML += html;
+    });
+  } else {
+    document.getElementById("nameInput").value = "";
+    document.getElementById("rsvp_its_you").classList.remove('d-block');
+    document.getElementById("rsvp_its_you").classList.add('d-none');
+    document.getElementById("rsvp_name").style.display = "block";
+  }
+}
+
 
