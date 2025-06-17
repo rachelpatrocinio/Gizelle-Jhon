@@ -182,17 +182,21 @@
                     <p class="lora font-14 px-4 pt-4 text-center">La vostra presenza sarà per noi il regalo più prezioso. <br>
                         Tuttavia, se desiderate contribuire con un dono, saremo felici di ricevere il vostro sostegno per realizzare il nostro viaggio di nozze e i nostri sogni futuri.
                         <br><br>
-                        Intestatari:<br><strong>Jhon Pier Sagunos Melchor</strong> e <br> 
-                        <strong>Gizelle Manalo Catigbac</strong>
-                        <button class="copy-button" onclick="copyNames()"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="Copia Nomi"><i class="fa-solid fa-copy"></i></button>
+                        Intestatari:
+                        <p id="names" class="lora text-center font-14">
+                            <strong>Jhon Pier Sagunos Melchor</strong> e <br> 
+                            <strong>Gizelle Manalo Catigbac</strong>
+                            <button class="copy-button" onclick="copyText('names', this)"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="Copia Nomi"><i class="fa-solid fa-copy"></i></button>
+                        </p>
                         <br><br>
 
-                        <p id="names" class="text-center lora font-14">
-                            IBAN:<br><strong class="iban-text" id="iban">IT56I0347501605CC0012625757</strong>
-                            <button class="copy-button" onclick="copyIBAN()"
+                        <p class="text-center lora font-14">IBAN:</p>
+                        <p class="text-center lora font-14">
+                            <strong class="iban-text" id="iban">IT56I0347501605CC0012625757</strong>
+                            <button class="copy-button" onclick="copyText('iban', this)"
                             data-bs-toggle="tooltip"
                             data-bs-placement="top"
                             title="Copia IBAN"><i class="fa-solid fa-copy"></i></button>
@@ -200,14 +204,22 @@
                             
                             <div class="d-flex justify-content-center gap-5">
                                 <p class="text-center lora">
-                                    Banca:<br><strong class="text-center lora font-14">ING BANK N.V.
+                                    Banca:<br><strong class="text-center lora font-14" id="bankName">ING BANK N.V.
                                     </strong>
+                                    <button class="copy-button" onclick="copyText('bankName', this)"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Copia BANCA"><i class="fa-solid fa-copy"></i></button>
                                     <br><br>
                                 </p>
                                 
                                 <p class="text-center lora">
-                                    BIC/SWIFT:<br><strong class="text-center lora font-14">NGBITD1XXX
+                                    BIC/SWIFT:<br><strong class="text-center lora font-14" id="bicCode">NGBITD1XXX
                                     </strong>
+                                    <button class="copy-button" onclick="copyText('bicCode', this)"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Copia BIC/SWIFT"><i class="fa-solid fa-copy"></i></button>
                                     <br><br>
                                 </p>
                             </div>

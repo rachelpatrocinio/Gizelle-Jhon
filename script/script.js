@@ -995,5 +995,22 @@ function copyIBAN() {
     });
   }
 
+  function copyText(elementId, button) {
+    var text = document.getElementById(elementId).innerText;
+
+    navigator.clipboard.writeText(text).then(function () {
+      var tooltip = bootstrap.Tooltip.getInstance(button);
+      tooltip.setContent({ '.tooltip-inner': 'Copiato!' });
+      tooltip.show();
+
+      // Ripristina tooltip dopo 2 secondi
+      setTimeout(function () {
+        tooltip.setContent({ '.tooltip-inner': button.title });
+      }, 2000);
+    }).catch(function (err) {
+      console.error("Errore nella copia: ", err);
+    });
+  }
+
 
 
