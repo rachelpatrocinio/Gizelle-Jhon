@@ -181,7 +181,13 @@
                     <p class="lora font-14 p-4 text-center">La vostra presenza sarà per noi il regalo più prezioso. <br>
                         Tuttavia, se desiderate contribuire con un dono, saremo felici di ricevere il vostro sostegno per realizzare il nostro viaggio di nozze e i nostri sogni futuri.
                         <br><br>
-                        IBAN:<br><strong>IT56I0347501605CC0012625757</strong><br><br>
+                        IBAN:<br><strong class="iban-text" id="iban">IT56I0347501605CC0012625757</strong>
+                        <button class="copy-button" onclick="copyIBAN()"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="Copia IBAN"><i class="fa-solid fa-copy"></i></button>
+                        <br><br>
+                        
                         Intestato a: <br><strong>Jhon Pier Sagunos Melchor</strong> e <br> <strong>Gizelle Manalo Catigbac</strong></p>
                 </div>
 
@@ -705,6 +711,7 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 </html>

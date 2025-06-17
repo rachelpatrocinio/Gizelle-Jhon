@@ -1052,3 +1052,14 @@ iframe{
 }
 
 
+.copy-button {
+  padding: 5px 10px;
+  color: #50593C;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.copy-button:hover{
+  color: #9A352A;
+}

@@ -957,3 +957,14 @@ function isItYou(yesOrNo){
 }
 
 
+function copyIBAN() {
+  const ibanText = document.getElementById("iban").innerText;
+  navigator.clipboard.writeText(ibanText).then(() => {
+    const msg = document.getElementById("copiedMessage");
+    msg.style.display = "inline";
+    setTimeout(() => msg.style.display = "none", 2000); // Nasconde dopo 2 secondi
+  }).catch(err => {
+    console.error("Errore nella copia dell'IBAN: ", err);
+  });
+}
+
