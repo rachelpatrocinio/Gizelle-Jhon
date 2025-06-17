@@ -968,3 +968,32 @@ function copyIBAN() {
   });
 }
 
+  document.addEventListener("DOMContentLoaded", function () {
+    var tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    for (var i = 0; i < tooltipTriggerList.length; i++) {
+      new bootstrap.Tooltip(tooltipTriggerList[i]);
+    }
+  });
+
+  function copyNames(button) {
+    var namesElement = document.getElementById("names");
+    var namesText = namesElement.innerText;
+
+    navigator.clipboard.writeText(namesText).then(function () {
+      var tooltip = bootstrap.Tooltip.getInstance(button);
+
+      // Cambia il contenuto del tooltip in "Copiato!"
+      tooltip.setContent({ '.tooltip-inner': 'Copiato!' });
+      tooltip.show();
+
+      // Torna al testo originale dopo 2 secondi
+      setTimeout(function () {
+        tooltip.setContent({ '.tooltip-inner': 'Copia Nomi' });
+      }, 2000);
+    }).catch(function (err) {
+      console.error("Errore durante la copia dei nomi:", err);
+    });
+  }
+
+
+
