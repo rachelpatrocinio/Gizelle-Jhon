@@ -994,12 +994,14 @@ footer h5{
   font-size: 11px;
 }
 
-.textarea_rsvp{
+.textarea_rsvp,
+.extra_name{
   color: #50593C;
   outline-color: #50593C;
   width: 100%;
   padding: 10px !important;
   margin-top: 10px;
+  letter-spacing: 2px;
 }
 
 .select_response{

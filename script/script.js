@@ -962,13 +962,17 @@ function isItYou(yesOrNo){
               <p>🕔 17:30 </p>
   
               <div class="mt-4">
-                <p class="font-14">Quali sono le tue preferenze alimentari (allergie, intolleranze, dieta specifica)?</p>
-                <textarea class="textarea_rsvp lora" name="PREFERENZE_ALIMENTARI:_${member}"></textarea>
+                <p class="font-14 lora">Quali sono le tue preferenze alimentari? Specifica qui sotto nella box</p>
+                <textarea class="textarea_rsvp lora font-14" name="PREFERENZE_ALIMENTARI:_${member}" placeholder="Allergie, intolleranze, preferenze alimentari ecc..."></textarea>
               </div>
 
               <div class="mt-4">
-                <p class="font-14">Ti farebbe piacere venire con un accompagnatore? Se si, indicaci il nome e segnalaci eventuali intolleranze o eventuali allergie, intolleranze o esigenze alimentari </p>
-                <textarea class="textarea_rsvp lora" name="PERSONA_EXTRA:_${member}"></textarea>
+                <p class="font-14 lora">Ti farebbe piacere venire con un accompagnatore? Se si, indicaci il nome e segnalaci eventuali intolleranze o eventuali allergie, intolleranze o esigenze alimentari </p>
+                <p class="font-14 lora mt-3">Nome e cognome</p>
+                <input type="text" class="lora font-14 extra_name" name="PERSONA_EXTRA:_${member}">
+
+                <p class="font-14 mt-3">Preferenze alimentari</p>
+                <textarea class="textarea_rsvp lora font-14" name="PREFERENZE_ALIMENTARI_PERSONA_EXTRA:_${member}" placeholder="Allergie, intolleranze, preferenze alimentari ecc..."></textarea>
               </div>
             </label>
           </fieldset><br>
@@ -1005,8 +1009,8 @@ function isItYou(yesOrNo){
               <p>🕔 17:30 </p>
   
               <div class="mt-4">
-                <p class="font-14">Quali sono le tue preferenze alimentari (allergie, intolleranze, dieta specifica)?</p>
-                <textarea class="textarea_rsvp lora" name="PREFERENZE_ALIMENTARI:_${member}"></textarea>
+                <p class="font-14 lora">Quali sono le tue preferenze alimentari? Specifica qui sotto nella box</p>
+                <textarea class="textarea_rsvp lora font-14" name="PREFERENZE_ALIMENTARI:_${member}" placeholder="Allergie, intolleranze, preferenze alimentari ecc..."></textarea>
               </div>
             </label>
           </fieldset><br>
