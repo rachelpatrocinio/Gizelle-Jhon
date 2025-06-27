@@ -911,42 +911,109 @@ function isItYou(yesOrNo){
 
     const members = families[matchedFamilyKey];
     members.forEach(member => {
-      const html = `
-        <fieldset>
-          <legend class="color-dark-pink alex-brush-regular font-3">${member}</legend>
-          <input type="hidden" name="members[]" value="${member}">
+      if(member.toLowerCase() == 'sergio colasanti' || 
+        member.toLowerCase() == 'luca westendorf' ||
+        member.toLowerCase() == 'davide mungiguerra' ||
+        member.toLowerCase() == 'jacopo cantalini' ||
+        member.toLowerCase() == 'luca messelesc' ||
+        member.toLowerCase() == 'gianluca arditi' ||
+        member.toLowerCase() == 'roberta caponigri' ||
+        member.toLowerCase() == 'alfonso capaldo' ||
+        member.toLowerCase() == 'laura seraceno' ||
+        member.toLowerCase() == 'antonio baiano svizzero' ||
+        member.toLowerCase() == 'federica piantadosi' ||
+        member.toLowerCase() == 'maria pia ciocci' ||
+        member.toLowerCase() == 'ilaria petti' ||
+        member.toLowerCase() == 'giulia kociuba' ||
+        member.toLowerCase() == 'silvia di tomassi' ||
+        member.toLowerCase() == 'mariarosaria russo' ||
+        member.toLowerCase() == 'salvatore carannante' ||
+        member.toLowerCase() == 'enrico di lorenzo' ||
+        member.toLowerCase() == 'lucio sgarlata' ||
+        member.toLowerCase() == 'mattia bellisario' ||
+        member.toLowerCase() == 'matteo barbarossa' ||
+        member.toLowerCase() == 'michael gesmundo'){
+          const html = `
+          <fieldset>
+            <legend class="color-dark-pink alex-brush-regular font-3">${member}</legend>
+            <input type="hidden" name="members[]" value="${member}">
+  
+            <label class="mt-3 w-100">
+              <div class="d-flex justify-content-between">
+                <p class="font-2"><strong>Cerimonia in Chiesa</strong></p>  
+                <select class="select_response color-green" name="CERIMONIA:_${member}" required>
+                  <option value="Sì">Sì</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+              <p class="font-14">📍 Chiesa di Sant'Anselmo all'Aventino</p>
+              <p>🕒 15:00 </p>
+            </label>
+  
+            <label class="mt-3">
+              <div class="d-flex justify-content-between">
+                <p class="font-2"><strong>Ricevimento in Location</strong></p>  
+                <select class="select_response color-green" name="RICEVIMENTO:_${member}" required>
+                  <option value="Sì">Sì</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+              <p class="font-14">📍 Magnolia Resort</p>
+              <p>🕔 17:30 </p>
+  
+              <div class="mt-4">
+                <p class="font-14">Quali sono le tue preferenze alimentari (allergie, intolleranze, dieta specifica)?</p>
+                <textarea class="textarea_rsvp lora" name="PREFERENZE_ALIMENTARI:_${member}"></textarea>
+              </div>
 
-          <label class="mt-3 w-100">
-            <div class="d-flex justify-content-between">
-              <p class="font-2"><strong>Cerimonia in Chiesa</strong></p>  
-              <select class="select_response color-green" name="CERIMONIA:_${member}" required>
-                <option value="Sì">Sì</option>
-                <option value="No">No</option>
-              </select>
-            </div>
-            <p class="font-14">📍 Chiesa di Sant'Anselmo all'Aventino</p>
-            <p>🕒 15:00 </p>
-          </label>
+              <div class="mt-4">
+                <p class="font-14">Ti farebbe piacere venire con un accompagnatore? Se si, indicaci il nome e segnalaci eventuali intolleranze o eventuali allergie, intolleranze o esigenze alimentari </p>
+                <textarea class="textarea_rsvp lora" name="PERSONA_EXTRA:_${member}"></textarea>
+              </div>
+            </label>
+          </fieldset><br>
+        `;
+        container.innerHTML += html;
 
-          <label class="mt-3">
-            <div class="d-flex justify-content-between">
-              <p class="font-2"><strong>Ricevimento in Location</strong></p>  
-              <select class="select_response color-green" name="RICEVIMENTO:_${member}" required>
-                <option value="Sì">Sì</option>
-                <option value="No">No</option>
-              </select>
-            </div>
-            <p class="font-14">📍 Magnolia Resort</p>
-            <p>🕔 17:30 </p>
+        } else {
+          const html = `
+          <fieldset>
+            <legend class="color-dark-pink alex-brush-regular font-3">${member}</legend>
+            <input type="hidden" name="members[]" value="${member}">
+  
+            <label class="mt-3 w-100">
+              <div class="d-flex justify-content-between">
+                <p class="font-2"><strong>Cerimonia in Chiesa</strong></p>  
+                <select class="select_response color-green" name="CERIMONIA:_${member}" required>
+                  <option value="Sì">Sì</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+              <p class="font-14">📍 Chiesa di Sant'Anselmo all'Aventino</p>
+              <p>🕒 15:00 </p>
+            </label>
+  
+            <label class="mt-3">
+              <div class="d-flex justify-content-between">
+                <p class="font-2"><strong>Ricevimento in Location</strong></p>  
+                <select class="select_response color-green" name="RICEVIMENTO:_${member}" required>
+                  <option value="Sì">Sì</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+              <p class="font-14">📍 Magnolia Resort</p>
+              <p>🕔 17:30 </p>
+  
+              <div class="mt-4">
+                <p class="font-14">Quali sono le tue preferenze alimentari (allergie, intolleranze, dieta specifica)?</p>
+                <textarea class="textarea_rsvp lora" name="PREFERENZE_ALIMENTARI:_${member}"></textarea>
+              </div>
+            </label>
+          </fieldset><br>
+        `;
+        container.innerHTML += html;
+        }
 
-            <div class="mt-4">
-              <p class="font-14">Quali sono le tue preferenze alimentari (allergie, intolleranze, dieta specifica)?</p>
-              <textarea class="textarea_rsvp lora" name="PREFERENZE_ALIMENTARI:_${member}"></textarea>
-            </div>
-          </label>
-        </fieldset><br>
-      `;
-      container.innerHTML += html;
     });
   } else {
     document.getElementById("nameInput").value = "";
