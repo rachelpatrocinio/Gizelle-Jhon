@@ -967,7 +967,7 @@ function isItYou(yesOrNo){
               </div>
 
               <div class="mt-4">
-                <p class="font-14 lora">Ti farebbe piacere venire con un accompagnatore? Se si, indicaci il nome e segnalaci eventuali intolleranze, allergie o esigenze alimentari </p>
+                <p class="font-14 lora">Ti farebbe piacere venire con un accompagnatore? Se sì, indicaci il nome e segnalaci eventuali intolleranze, allergie o esigenze alimentari </p>
                 <p class="font-14 lora mt-3">Nome e cognome</p>
                 <input type="text" class="lora font-14 extra_name" name="PERSONA_EXTRA:_${member}">
 
